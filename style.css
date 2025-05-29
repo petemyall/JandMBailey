@@ -1,0 +1,427 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #002244;
+}
+
+body:not(.journal-page) {
+  background-image: url("images/iona-flag-mountains.jpg"), linear-gradient(to bottom, #dbe7f0, #f8f9fa);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+body.journal-page {
+  background: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4)), 
+              url("images/pale-blue-texture.jpg") repeat fixed center center;
+  background-size: cover;
+}
+
+h1 {
+  margin: 20px 0;
+  text-shadow: 1px 1px 2px #ffffff;
+}
+
+/* NAVIGATION */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  background-color: rgba(130,210,230,0.2);
+  padding: 10px;
+}
+
+nav a {
+  flex: 0 1 calc(25% - 10px);
+  box-sizing: border-box;
+  text-align: center;
+  padding: 5px 10px;
+  background-color: #0077b6;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 12px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #005f8a;
+}
+
+nav.journal-nav a {
+  padding: 6px 12px;
+  font-size: 12px;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+@media (max-width: 600px) {
+  nav.journal-nav a {
+    padding: 5px 10px;
+    font-size: 10px;
+  }
+}
+.description-box {
+  background: rgba(173, 216, 230, 0.5); /* Pale blue with more transparency */
+  color: #003366;                       /* Deep blue text for readability */
+  max-width: 800px;                     /* Wide enough for readability */
+  margin: 30px auto;                    /* Centered with spacing */
+  padding: 25px;                        /* Padding for content */
+  border-radius: 15px;                  /* Rounded corners */
+  box-shadow: 4px 4px 15px rgba(0,0,0,0.2); /* Soft shadow */
+  font-size: 1.1em;                     /* Slightly larger text */
+  line-height: 1.6;                     /* Comfortable spacing between lines */
+}
+
+.description-box p {
+  margin-bottom: 10px;                  /* Spacing between facts */
+}
+
+.description-box strong {
+  color: #0077b6;                       /* Highlighted numbering */
+  font-size: 1.2em;                     /* Larger numbering */
+}
+
+.collapsible-button {
+  display: block;
+  margin: 20px auto;
+  padding: 12px 24px;
+  font-size: 1em;
+  font-weight: bold;
+  color: white;
+  background-color: #004080;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+}
+
+.collapsible-button:hover {
+  background-color: #0059b3;
+}
+
+.album-links {
+  display: none;
+  max-width: 960px;
+  margin: 20px auto;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.album-card {
+  flex: 0 1 calc((100% - 60px) / 3); /* 3 per row with gap */
+  max-width: calc((100% - 60px) / 3);
+  background: rgba(255,255,255,0.85);
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.album-card:hover {
+  transform: scale(1.05);
+}
+
+.album-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.album-card a {
+  display: block;
+  padding: 10px;
+  color: #003366;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Album button */
+.album-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #0077b6;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  width: 20%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.album-button:hover {
+  background-color: #005f8a;
+}
+
+/* LOGBOOK "LEATHER BOOK" STYLING */
+.journal-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 40px auto 20px;
+  padding: 0 10px;
+}
+
+.journal-center {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.journal-book {
+  flex: 0 1 calc((100% - 40px) / 3);
+  max-width: calc((100% - 40px) / 3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  background: linear-gradient(to right, #3a1f0f 10px, #5a3825 10px, #f5e9d4);
+  border-left: 12px solid #2a150a;
+  border-radius: 5px 15px 15px 5px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  background-image: url("images/leather-texture.jpg");
+  background-size: cover;
+  background-blend-mode: multiply;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.journal-book:hover {
+  transform: scale(1.03);
+  background-blend-mode: overlay;
+}
+
+.label-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.day-label {
+  display: block;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #d4af37;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+  letter-spacing: 1px;
+  font-family: 'Georgia', serif;
+}
+
+.port-label {
+  font-size: 1.5em;
+  color: #fefae0;
+  font-weight: bold;
+  font-family: 'Georgia', serif;
+}
+
+@media (max-width: 600px) {
+  .journal-book {
+    flex: 0 1 calc((100% - 20px) / 2);
+    max-width: calc((100% - 20px) / 2);
+  }
+  .day-label {
+    font-size: 0.9em;
+  }
+  .port-label {
+    font-size: 1.1em;
+  }
+}
+
+/* IMAGE FRAMES AND NARRATIVE BOXES */
+.narrative-box, .facts-box {
+  background: rgba(173, 216, 230, 0.3);
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.image-frame {
+  display: inline-block;
+  border: 3px solid #0077b6;
+  border-radius: 12px;
+  padding: 10px;
+  background-color: rgba(173, 216, 230, 0.2);
+  max-width: 300px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.image-label {
+  display: inline-block;
+  background-color: #0077b6;
+  color: white;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.image-frame img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+  display: block;
+  margin: auto;
+}
+
+main {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: rgba(173, 216, 230, 0.2);
+  border-radius: 10px;
+}
+
+main p {
+  margin-bottom: 10px;
+}
+
+/* MENU GALLERY / FLIPBOOK */
+.book-container {
+  perspective: 2000px;
+  width: 300px;
+  height: 400px;
+  margin: 20px auto;
+  position: relative;
+  float: right; /* Aligns book to right side */
+}
+
+.page {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: white;
+  background-size: cover;
+  background-position: center;
+  transform-origin: left center;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  cursor: pointer;
+}
+
+.page1 { background-image: url('/fjords-cruise-2025/images/menu1.jpg'); z-index: 4; }
+.page2 { background-image: url('/fjords-cruise-2025/images/menu2.jpg'); z-index: 3; }
+.page3 { background-image: url('/fjords-cruise-2025/images/menu3.jpg'); z-index: 2; }
+.page4 { background-image: url('/fjords-cruise-2025/images/menu4.jpg'); z-index: 1; }
+
+.page.flipped { transform: rotateY(-180deg); }
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+}
+.video-label {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 8px;
+  font-size: 1.1em;
+}
+
+.video-label a {
+  display: block;
+  color: #0077b6;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 4px;
+}
+
+.video-label a:hover {
+  text-decoration: underline;
+}
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;  /* Adjust as needed */
+  margin: 20px auto;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9; /* Modern browsers support */
+  display: block;
+}
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.video-label {
+  text-align: center;
+  font-weight: bold;
+  margin: 10px 0;
+  font-size: 1.2em;
+}
+.facts-section {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  padding: 0 20px;
+}
+
+.facts-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.facts-section li {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+.video-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
