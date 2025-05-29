@@ -7,7 +7,7 @@ body {
 }
 
 body:not(.journal-page) {
-  background-image: url("images/iona-flag-mountains.jpg"), linear-gradient(to bottom, #dbe7f0, #f8f9fa);
+  background-image: url("images/japan 1.jpg"), linear-gradient(to bottom, #dbe7f0, #f8f9fa);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
