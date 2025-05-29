@@ -15,7 +15,7 @@ body:not(.journal-page) {
 
 body.journal-page {
   background: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4)), 
-              url("images/pale-blue-texture.jpg") repeat fixed center center;
+              url("images/japan 1-home-page-background.jpg") repeat fixed center center;
   background-size: cover;
 }
 
