@@ -1,1 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bailey's Japanese Trip</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json"> <!-- for PWA -->
 
+  <style>
+    body {
+      background: url('images/japa 1.jpg') center center no-repeat;
+      background-size: cover;
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #003366;
+      text-shadow: 1px 1px 2px #ffffff55;
+      height: 200vh; /* For scroll effect */
+    }
+
+    h1 {
+      text-align: center;
+      margin: 20px;
+    }
+
+    .description-box {
+      background: rgba(173, 216, 230, 0.6); /* pale blue */
+      color: #002244; /* dark blue */
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 10px;
+      font-size: 1.1em;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      animation: fadeIn 1.5s ease;
+    }
+
+    
+
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      padding: 10px;
+      background: rgba(0, 0, 0, 0.4);
+      color: white;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+
+  <script>
+    // Scroll-triggered parallax background effect starting ~20% down
+    window.addEventListener('scroll', function () {
+      const scrollY = window.scrollY;
+      const triggerPoint = window.innerHeight * 0.2;
+      if (scrollY > triggerPoint) {
+        const offset = (scrollY - triggerPoint) * 0.3;
+        document.body.style.backgroundPosition = `center ${-offset}px`;
+      } else {
+        document.body.style.backgroundPosition = 'center center';
+      }
+    });
+  </script>
+</head>
+
+<body>
+
+  <h1>Janet and Merlin's Far Eastern Adventure 2025</h1>
+
+  <div class="description-box">
+    <p>This is a record of Janet and Merlin's recent Japanese trip.</p>
+  </div>
+
+<nav>
+    <a href="logbook.html">📖<br>FIRST DAY</a>
+  </div>
+</nav>
+
+  <footer>
+    © J&M 2025
+  </footer>
+
+</body>
+</html>
