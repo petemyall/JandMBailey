@@ -15,7 +15,7 @@ body {
 
 .description-box {
   background: rgba(194, 167, 179, 0.5);
-  color: #003366; /* Deep blue text for readability */
+  color: #8a035d;
   max-width: 800px; /* Wide enough for readability */
   margin: 30px auto; /* Centered with spacing */
   padding: 25px; /* Padding for content */
