@@ -34,6 +34,13 @@ body {
   font-size: 1.2em; /* Larger numbering */
 }
 
+body.journal-page {
+  background-image: url('images/journal-page-background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
 body.gallery-page {
   background-image: url('images/gallery-page-background.jpg');
   background-size: cover;
