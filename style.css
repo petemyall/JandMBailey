@@ -13,6 +13,27 @@ body {
   background-attachment: fixed;
 }
 
+.description-box {
+  background: rgba(173, 216, 230, 0.5); /* Pale blue with transparency */
+  color: #003366; /* Deep blue text for readability */
+  max-width: 800px; /* Wide enough for readability */
+  margin: 30px auto; /* Centered with spacing */
+  padding: 25px; /* Padding for content */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 4px 4px 15px rgba(0,0,0,0.2); /* Soft shadow */
+  font-size: 1.1em; /* Slightly larger text */
+  line-height: 1.6; /* Comfortable spacing between lines */
+}
+
+.description-box p {
+  margin-bottom: 10px; /* Spacing between paragraphs */
+}
+
+.description-box strong {
+  color: #0077b6; /* Highlighted numbering */
+  font-size: 1.2em; /* Larger numbering */
+}
+
 body.gallery-page {
   background-image: url('images/pagoda-background.jpg');
   background-size: cover;
