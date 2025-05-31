@@ -35,7 +35,7 @@ body {
 }
 
 body.gallery-page {
-  background-image: url('images/pagoda-background.jpg');
+  background-image: url('images/gallery-page-background.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
