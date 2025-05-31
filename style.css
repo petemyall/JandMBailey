@@ -35,7 +35,7 @@ body {
 }
 
 body.journal-page {
-  background-image: url('images/journal-page-bzckground.jpg');
+  background-image: url('images/journal-page-background.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
