@@ -64,6 +64,7 @@ nav a.fancy-button {
   transition: background-color 0.3s ease, transform 0.3s ease;
   box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
   backdrop-filter: blur(4px);
+  margin-bottom: 10px;
 }
 
 nav a.fancy-button:hover {
