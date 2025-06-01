@@ -13,7 +13,7 @@ body {
 }
 
 body.gallery-page {
-  background-image: url('images/japan-pagoda.jpg');
+  background-image: url('images/gallery-page-background.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
