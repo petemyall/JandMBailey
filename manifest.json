@@ -1,0 +1,20 @@
+{
+  "name": "Fjords Cruise 2025",
+  "short_name": "Fjords Cruise",
+  "start_url": "index.html?homescreen",
+  "display": "standalone",
+  "background_color": "#f0f8ff",
+  "theme_color": "#003366",
+  "icons": [
+    {
+      "src": "images/icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
