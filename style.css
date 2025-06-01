@@ -25,6 +25,13 @@ body.itinerary-page {
   background-attachment: fixed;
 }
 
+body.journal-page {
+  background-image: url('images/japan-pagoda.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
 /* Restore original styles for journal, description-box, gallery, etc. */
 
 h1, h2 {
