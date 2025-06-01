@@ -12,6 +12,12 @@ body {
   background-attachment: fixed;
 }
 
+body.gallery-page {
+  background-image: url('images/japan-pagoda.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
 body.itinerary-page {
   background-image: url('images/japan-pagoda.jpg');
   background-size: cover;
