@@ -165,3 +165,8 @@ footer {
   font-size: 1em;
   letter-spacing: 1px;
 }
+.site-footer img.footer-icon {
+  height: 24px;
+  vertical-align: middle;
+  margin-left: 8px;
+}
