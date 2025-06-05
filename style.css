@@ -42,7 +42,7 @@ h1, h2 {
 .subtitle {
   font-size: 1.75em; /* or 0.9em if you want it a touch smaller */
   font-weight: normal;
-  color: #555; /* Optional: softer colour */
+  color: #b30000; /* Optional: softer colour */
   margin-top: -10px; /* Pull it closer to the main heading */
 }
 
