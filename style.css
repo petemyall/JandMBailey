@@ -40,11 +40,11 @@ h1, h2, h3 {
   text-shadow: 1px 1px 2px #fff;
 }
 h1, h2, h3 {
-  font-size: clamp(1.5rem, 5vw, 2.5rem);
-  max-width: 90%;
-  margin: 0 auto;
+  display: block;
+  max-width: 100%;
   text-align: center;
-  line-height: 1.2;
+  white-space: nowrap;
+  font-size: clamp(1rem, 8vw, 3rem);
 }
 .subtitle {
   font-size: 2em; /* or 0.9em if you want it a touch smaller */
