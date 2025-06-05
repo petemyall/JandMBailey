@@ -40,10 +40,10 @@ h1, h2 {
   text-shadow: 1px 1px 2px #fff;
 }
 .main-heading {
-  font-size: 2em;
+  font-size: 1.75em;
 }
 .subtitle {
-  font-size: 1.75em; /* or 0.9em if you want it a touch smaller */
+  font-size: 1.6em; /* or 0.9em if you want it a touch smaller */
   font-weight: normal;
   color: #b30000; /* Optional: softer colour */
   margin-top: -10px; /* Pull it closer to the main heading */
