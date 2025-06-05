@@ -34,10 +34,15 @@ body.journal-page {
 
 /* Restore original styles for journal, description-box, gallery, etc. */
 
-h1, h2 {
+h1, h2, h3 {
   font-family: 'Noto Serif JP', serif;
   color: #b30000;
   text-shadow: 1px 1px 2px #fff;
+}
+h1, h2, h3 {
+  max-width: 80%;
+  margin: 0 auto;
+  text-align: center;
 }
 .subtitle {
   font-size: 2em; /* or 0.9em if you want it a touch smaller */
