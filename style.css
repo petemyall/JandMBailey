@@ -39,6 +39,12 @@ h1, h2 {
   color: #b30000;
   text-shadow: 1px 1px 2px #fff;
 }
+.subtitle {
+  font-size: 1em; /* or 0.9em if you want it a touch smaller */
+  font-weight: normal;
+  color: #555; /* Optional: softer colour */
+  margin-top: -10px; /* Pull it closer to the main heading */
+}
 
 .description-box {
   font-family: 'Noto Serif JP', serif;
