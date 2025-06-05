@@ -41,11 +41,10 @@ h1, h2, h3 {
 }
 h1, h2, h3 {
   font-size: clamp(1.5rem, 5vw, 2.5rem);
-  max-width: 100%;
+  max-width: 90%;
+  margin: 0 auto;
   text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  line-height: 1.2;
 }
 .subtitle {
   font-size: 2em; /* or 0.9em if you want it a touch smaller */
