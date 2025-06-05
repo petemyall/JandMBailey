@@ -34,62 +34,26 @@ body.journal-page {
 
 /* Restore original styles for journal, description-box, gallery, etc. */
 
-h1, h2, h3 {
+h1, h2 {
   font-family: 'Noto Serif JP', serif;
   color: #b30000;
   text-shadow: 1px 1px 2px #fff;
 }
-h1, h2, h3 {
-  font-size: clamp(1rem, 10vw, 3rem);
-  display: inline-block;
-  max-width: 100vw;
-  white-space: nowrap;
-  text-align: center;
-  margin: 0 auto;
-}
-.heading-scaler {
-  width: 100vw;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  padding: 10px 0;
-}
-
-.heading-scaler h1 {
-  font-size: 100vw;
-  max-width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: clip;
-  margin: 0;
-  line-height: 1.2;
-}
-.subtitle {
-  font-size: 2em; /* or 0.9em if you want it a touch smaller */
-  font-weight: normal;
-  color: #d49292; /* Optional: softer colour */
-  margin-top: -10px; /* Pull it closer to the main heading */
-}
 
 .description-box {
-  font-family: 'Noto Serif JP', serif;
-  background: rgba(247, 200, 208, 0.5);
-  color: #b30000;
+  background: rgba(173, 216, 230, 0.5);
+  color: #003366;
   max-width: 800px;
   margin: 30px auto;
-  padding: 5px 10px 10px 10px; /* top, right, bottom, left */
+  padding: 25px;
   border-radius: 15px;
   box-shadow: 4px 4px 15px rgba(0,0,0,0.2);
-  font-size: 1.75em;
-  line-height: 1.25;
+  font-size: 1.1em;
+  line-height: 1.6;
 }
 
 .description-box p {
   margin-bottom: 10px;
-}
-  .description-box p:first-child {
-  margin-top: 0;
-  }
 }
 
 .description-box strong {
@@ -150,7 +114,7 @@ nav a.fancy-button::after {
 }
 
 .itinerary-section {
-  background: rgba(177, 206, 252, 0.60);
+  background: rgba(255, 255, 255, 0.85);
   max-width: 900px;
   margin: 40px auto;
   padding: 30px;
@@ -199,9 +163,4 @@ footer {
   padding: 15px;
   font-size: 1em;
   letter-spacing: 1px;
-}
-.site-footer img.footer-icon {
-  height: 24px;
-  vertical-align: middle;
-  margin-left: 8px;
 }
