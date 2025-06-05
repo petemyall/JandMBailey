@@ -52,11 +52,11 @@ h1, h2 {
   color: #b30000;
   max-width: 800px;
   margin: 30px auto;
-  padding: 15px;
+  padding: 10px;
   border-radius: 15px;
   box-shadow: 4px 4px 15px rgba(0,0,0,0.2);
   font-size: 1.75em;
-  line-height: 1.6;
+  line-height: 1.25;
 }
 
 .description-box p {
