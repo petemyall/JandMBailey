@@ -236,3 +236,7 @@ footer {
   font-size: 1em;
   letter-spacing: 1px;
 }
+@media (max-width: 599px) {
+  body.index-page .main-heading {
+    font-size: 1.50em;}
+}
