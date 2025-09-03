@@ -31,6 +31,13 @@ body.journal-page {
   background-attachment: fixed;
 }
 
+body.journal-index {
+  background-image: url('images/journal-index-background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
 /* Restore original styles for journal, description-box, gallery, etc. */
 
 h1, h2 {
@@ -48,12 +55,28 @@ h1, h2 {
   margin-top: -10px; /* Pull it closer to the main heading */
 }
 
+.narrative-box {
+  background: rgba(247, 200, 208, 0.6);
+  color: #b30000;
+  max-width: 800px;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 4px 4px 15px rgba(0,0,0,0.2);
+  font-size: 0.75em;
+  line-height: 1.6;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  display: block;
+}
+
 .description-box {
   background: rgba(247, 200, 208, 0.6);
   color: #b30000;
   max-width: 800px;
-  margin: 5px 20px 20px 5px;
-  padding: 25px;
+  margin: 5px;
+  padding: 10px;
   border-radius: 15px;
   box-shadow: 4px 4px 15px rgba(0,0,0,0.2);
   font-size: 1.75em;
@@ -63,7 +86,6 @@ h1, h2 {
   text-align: center;
   display: block;
 }
-}
 
 .description-box p {
   margin-bottom: 10px;
@@ -72,6 +94,12 @@ h1, h2 {
 .description-box strong {
   color: #0077b6;
   font-size: 1.2em;
+}
+
+body.journal-page .description-box {
+  font-size: 0.9em; /* or whatever size you want */
+  max-height: 57vh;
+  overflow-y: auto;
 }
 
 nav a.fancy-button {
