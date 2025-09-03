@@ -11,6 +11,18 @@ body {
   background-attachment: fixed;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-wrapper {
+  flex: 1;
+}
+
 body.gallery-page {
   background-image: url('images/gallery-page-background.jpg');
   background-size: cover;
@@ -101,6 +113,25 @@ body.journal-page .description-box {
   max-height: 57vh;
   overflow-y: auto;
 }
+
+body.index-page .main-heading {
+    text-align: center;
+    margin: 20px;
+    font-size: 2.50em;
+    font-weight: 900;
+    color: #ffffff;
+    text-shadow:
+      2px 2px 4px rgba(0, 0, 0, 0.8),
+     -1px -1px 0 rgba(0, 0, 0, 0.6);
+  }
+body.index-page .subtitle {
+    text-align: center;
+    font-size: 1.75em;
+    font-weight: 600;
+    color: #f2cccc;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    margin-top: -10px;
+  }
 
 nav a.fancy-button {
   display: inline-block;
