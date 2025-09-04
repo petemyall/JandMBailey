@@ -113,6 +113,9 @@ body.journal-page .description-box {
   max-height: 57vh;
   overflow-y: auto;
 }
+body.journal-page .description-box {
+  padding-top: 100px;
+}
 
 body.index-page .main-heading {
     text-align: center;
@@ -242,6 +245,10 @@ footer {
 }
 body.index-page .subtitle {
     font-size: 1.25em;
+}
+  
+body.journal-page .description-box {
+  padding-top: 10px;
 }
   .description-box {
     font-size: 1.25em;
