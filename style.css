@@ -240,3 +240,6 @@ footer {
   body.index-page .main-heading {
     font-size: 1.50em;}
 }
+body.index-page .subtitle {
+    font-size: 1.25em;}
+}
