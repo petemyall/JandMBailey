@@ -248,3 +248,22 @@ body.index-page .subtitle {
     margin: 1px;
     padding: 2px;
   }
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  nav a.fancy-button {
+    flex: 0 1 calc(33.333% - 20px); /* Three buttons per row, with spacing */
+    font-size: 0.9em;
+    padding: 8px 10px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  nav a.fancy-button::after {
+    font-size: 0.8em;
+  }
+  }
