@@ -256,6 +256,8 @@ body.journal-page .description-box {
     margin: 1px;
     padding: 2px;
   }
+  .narrative-box {
+    margin-bottom: -25px;
   nav {
     display: flex;
     flex-wrap: wrap;
