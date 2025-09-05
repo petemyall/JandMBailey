@@ -110,7 +110,7 @@ h1, h2 {
 
 body.journal-page .description-box {
   font-size: 0.9em; /* or whatever size you want */
-  max-height: 57vh;
+  max-height: 45vh;
   overflow-y: auto;
 }
 body.journal-page .description-box {
