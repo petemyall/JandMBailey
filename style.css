@@ -131,6 +131,21 @@ body.journal-page .description-box {
   text-align: center;
   display: block;
 }
+body.travel-page .description-box {
+  background: rgba(247, 200, 208, 0.6);
+  color: #b30000;
+  max-width: 800px;
+  margin: 5px auto;
+  padding: 0;
+  border-radius: 15px;
+  box-shadow: 4px 4px 15px rgba(0,0,0,0.2);
+  font-size: 0.9em;  /* larger on desktop */
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: center;
+  display: block;
+}
+
 
 
 /* “Learn Japanese” content box on index page */
