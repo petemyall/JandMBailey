@@ -59,7 +59,7 @@ body.journal-index::before {
   z-index: -1; /* sits behind your content */
 }
 body.travel-page {
-  background: url('../images/travel-background.jpg') no-repeat center center/cover;
+  background: url('images/travel-background.jpg') no-repeat center center/cover;
 }
 
 /* ----------------------------------------------------
