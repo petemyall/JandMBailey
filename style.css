@@ -58,6 +58,9 @@ body.journal-index::before {
   background: rgba(255,255,255,0.6); /* light veil */
   z-index: -1; /* sits behind your content */
 }
+body.travel-page {
+  background: url('../images/travel-background.jpg') no-repeat center center/cover;
+}
 
 /* ----------------------------------------------------
    HEADINGS (used on both pages)
