@@ -463,6 +463,8 @@ footer {
     margin: 0.1px;
     padding: 0.5px;
    }
+   body.journal-index h1 {
+      font-size: 10px;
  .people-box h2 {
    font-size: 10px;
    }
