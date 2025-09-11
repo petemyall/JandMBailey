@@ -378,9 +378,16 @@ footer {
 .guides-box {
     grid-template-columns: 1fr; /* stack guides on small screens */
   }
+   .guides-box p {
+      font-size: 0.8em;
+   }
   .members-grid {
     grid-template-columns: 1fr 1fr; /* 2 columns on mobile */
+     font-size: 0.8em;
   }
+ .members-grid p {
+    font-size: 0.8em;
+ }
   footer {
     font-size: 0.8em;
   }
