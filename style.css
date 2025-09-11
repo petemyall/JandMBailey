@@ -480,7 +480,9 @@ footer {
   font-size: 0.85rem;
   padding: 0.2em 1.2em;
    }
-      
+ .people-box {
+    margin-bottom: 1px;
+ }
    
   footer {
     font-size: 0.8em;
