@@ -466,15 +466,15 @@ footer {
     padding: 0 10px;
   }
    .guides-box p {
-      font-size: 0.8em;
+      font-size: 0.75em;
    }
   .members-grid {
     grid-template-columns: 1fr 1fr; /* 2 columns on mobile */
      gap: 1px 5px;
-     font-size: 0.8em;
+     font-size: 0.75em;
   }
  .members-grid p {
-    font-size: 0.8em;
+    font-size: 0.75em;
  }
   footer {
     font-size: 0.8em;
