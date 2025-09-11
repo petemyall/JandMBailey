@@ -493,7 +493,10 @@ footer {
  .people-box {
     margin-bottom: 0.5px;
  }
-   
+  .back-btn {
+  padding: 5px 10px;
+  font-size: 0.6rem;
+  }
   footer {
     font-size: 0.8em;
   }
