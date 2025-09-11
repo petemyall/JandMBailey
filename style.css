@@ -58,8 +58,18 @@ body.journal-index::before {
   background: rgba(255,255,255,0.6); /* light veil */
   z-index: -1; /* sits behind your content */
 }
-body.travel-page {
-  background: url('images/travel-background.jpg') no-repeat center center/cover;
+ body.travel-page {
+  background-image: url('images/travel.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+body.travel-page::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(255,255,255,0.6); /* light veil */
+  z-index: -1; /* sits behind your content */
 }
 
 /* ----------------------------------------------------
@@ -69,6 +79,10 @@ h1, h2 {
   font-family: 'Noto Serif JP', serif;
   color: #b30000;
   text-shadow: 1px 1px 2px #fff; /* subtle lift over photo bg */
+}
+
+body.travel-page h2 {
+font-size: 1em;
 }
 
 /* Index page: main title + subtitle */
@@ -116,13 +130,24 @@ body.index-page .subtitle {
   color: #0077b6;     /* highlight emphasis */
   font-size: 1.2em;
 }
+/* Daily Activities list styling */
+.description-box ul {
+  font-size: 1em;     /* just above body size for easy reading */
+  line-height: 1.2;      /* generous spacing between lines */
+  margin: 0;
+  padding-left: 2em;   /* neat indent for bullets */
+}
+
+.description-box li {
+  margin-bottom: 0.5em;  /* space between each day */
+}
 
 body.journal-page .description-box {
   background: rgba(247, 200, 208, 0.6);
   color: #b30000;
   max-width: 800px;
   margin: 5px auto;
-  padding: 0;
+  padding: 2px;
   border-radius: 15px;
   box-shadow: 4px 4px 15px rgba(0,0,0,0.2);
   font-size: 0.9em;  /* larger on desktop */
@@ -131,21 +156,6 @@ body.journal-page .description-box {
   text-align: center;
   display: block;
 }
-body.travel-page .description-box {
-  background: rgba(247, 200, 208, 0.6);
-  color: #b30000;
-  max-width: 800px;
-  margin: 5px auto;
-  padding: 0;
-  border-radius: 15px;
-  box-shadow: 4px 4px 15px rgba(0,0,0,0.2);
-  font-size: 0.9em;  /* larger on desktop */
-  font-weight: bold;
-  line-height: 1.2;
-  text-align: center;
-  display: block;
-}
-
 
 
 /* “Learn Japanese” content box on index page */
@@ -259,6 +269,68 @@ body.travel-page .description-box {
   transform: scale(1.05);
   box-shadow: 0 6px 16px rgba(0,0,0,.25);
 }
+
+/* Hotel frame styling (smaller version) */
+.hotel-frame {
+  max-width: 200px;       /* 25% of 800px */
+  margin: 10px auto;      /* center on page */
+  border: 3px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.hotel-frame img {
+  width: 100%;            /* scales to fit the 200px frame */
+  height: auto;
+  display: block;
+}
+
+.hotel-frame figcaption {
+  font-size: 0.75em;
+  color: #444;
+  padding: 4px;
+  background: #f9f9f9;
+}
+
+/* Header row with hotel image */
+.hotel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap; /* keeps it neat on smaller screens */
+}
+
+.hotel-title {
+  flex: 1;
+}
+
+.hotel-title h1 {
+  margin: 0;
+  font-size: 1.6em;
+  line-height: 1.2;
+}
+
+.hotel-title .stay-dates {
+  margin: 0.3em 0 0;
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #444;
+}
+
+.hotel-thumb {
+  flex: 0 0 150px; /* fixed width for the photo */
+}
+
+.hotel-thumb img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+}
+
 /* People box under Learn Japanese */
 /* People box */
 .people-box {
@@ -337,6 +409,21 @@ body.travel-page .description-box {
   padding: 2px;
   border-radius: 10px;
   box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+}
+/* Semi-transparent overlay over background image */
+.page-wrapper {
+  position: relative;
+  z-index: 0;
+}
+
+.page-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.3); /* white overlay at 30% */
+  z-index: -1;                       /* sits behind content */
 }
 
 
