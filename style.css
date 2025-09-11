@@ -458,6 +458,9 @@ footer {
     margin: 1px;
     padding: 0.5px;
    }
+   body.people-box h2 {
+   font-size: 1.1em;
+   }
   .narrative-box {
     margin-bottom: -25px; /* tighten under “Learn Japanese” */
     padding: 0 10px;
@@ -476,9 +479,5 @@ footer {
   footer {
     font-size: 0.8em;
   }
-}
-@media (min-width: 600px) and (max-width: 1024px) {
-  body.index-page .main-heading { font-size: 2.1em; }
-  body.index-page .subtitle     { font-size: 1.45em; }
-}
+
 /* -------------------- END --------------------------*/
