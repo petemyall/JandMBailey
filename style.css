@@ -447,19 +447,14 @@ footer {
 -----------------------------------------------------*/
 @media (max-width: 599px) {
   body.index-page .main-heading {
-    font-size: 1.25em;
+    font-size: 1.1em;
   }
   body.index-page .subtitle {
-    font-size: 1.1em;
+    font-size: 1em;
     margin-bottom: 5px;
   }
-  .description-box {
-    font-size: 1.25em;
-    margin: 1px;
-    padding: 2px;
-  }
    body.index-page .description-box {
-    font-size: 1em;
+    font-size: 0.8em;
     margin: 1px;
     padding: 0.5px;
    }
