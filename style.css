@@ -470,7 +470,7 @@ footer {
    }
   .members-grid {
     grid-template-columns: 1fr 1fr; /* 2 columns on mobile */
-     gap: 2.5px 5px;
+     gap: 1px 5px;
      font-size: 0.8em;
   }
  .members-grid p {
