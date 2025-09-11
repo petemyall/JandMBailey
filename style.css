@@ -461,6 +461,9 @@ footer {
  .people-box h2 {
    font-size: 10px;
    }
+    .people-box h3 {
+   font-size: 10px;
+    }
   .narrative-box {
     margin-bottom: -25px; /* tighten under “Learn Japanese” */
     padding: 0 10px;
