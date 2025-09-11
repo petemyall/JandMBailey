@@ -454,7 +454,7 @@ footer {
     margin-bottom: 5px;
   }
    body.index-page .description-box {
-    font-size: 0.5em;
+    font-size: 0.8em;
     margin: 1px;
     padding: 0.5px;
    }
@@ -467,6 +467,7 @@ footer {
    }
   .members-grid {
     grid-template-columns: 1fr 1fr; /* 2 columns on mobile */
+     gap: 2.5px 5px;
      font-size: 0.8em;
   }
  .members-grid p {
