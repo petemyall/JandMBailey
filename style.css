@@ -462,9 +462,6 @@ footer {
     margin-bottom: -25px; /* tighten under “Learn Japanese” */
     padding: 0 10px;
   }
-.guides-box {
-    grid-template-columns: 1fr; /* stack guides on small screens */
-  }
    .guides-box p {
       font-size: 0.8em;
    }
