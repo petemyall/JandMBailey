@@ -368,6 +368,10 @@ footer {
     padding: 4px;                     /* slightly tighter padding */
     font-size: 0.75em;                 /* smaller font for fit */
   }
+   .peoples-box { font-size: 1.25em; }
+   .peoples-box h2{ font-size: 1.25em; }
+   .peoples-box h3{ font-size: 0.75em; }
+   
 
   .members-grid { grid-template-columns: 1fr 1fr; font-size: 0.8em; }
   .members-grid p { font-size: 0.8em; }
