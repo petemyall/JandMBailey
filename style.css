@@ -356,7 +356,7 @@ footer {
   body.index-page .main-heading { font-size: 1.25em; }
   body.index-page .subtitle { font-size: 1em; margin-bottom: 5px; }
   body.index-page h2 { font-size: 1.25em; }
-  body.index-page .description-box { font-size: 1em; margin: 1px; padding: 2px; }
+  body.index-page .description-box { font-size: 0.75em; margin: 1px; padding: 2px; }
   .narrative-box { margin-bottom: -25px; padding: 0 10px; }
 
   /* Guides side by side */
