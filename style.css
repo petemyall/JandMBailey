@@ -375,6 +375,12 @@ footer {
 
   .members-grid { grid-template-columns: 1fr 1fr; font-size: 0.8em; }
   .members-grid p { font-size: 0.8em; }
+
+  .journey-btn {
+   padding: 0.3em 0.6em;
+   margin: 0.5em 0;
+   font-size: 1rem;
+   }
   footer { font-size: 0.8em; }
 }
 
