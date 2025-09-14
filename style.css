@@ -357,8 +357,17 @@ footer {
   body.index-page .subtitle { font-size: 1.25em; margin-bottom: 5px; }
   .description-box { font-size: 1.25em; margin: 1px; padding: 2px; }
   .narrative-box { margin-bottom: -25px; padding: 0 10px; }
-  .guides-box { grid-template-columns: 1fr; }
-  .guides-box p { font-size: 0.8em; }
+
+  /* Guides side by side */
+  .guides-box {
+    grid-template-columns: 1fr 1fr;   /* two columns on mobiles */
+    gap: 4px;
+  }
+  .guides-box div {
+    padding: 4px;                     /* slightly tighter padding */
+    font-size: 0.75em;                 /* smaller font for fit */
+  }
+
   .members-grid { grid-template-columns: 1fr 1fr; font-size: 0.8em; }
   .members-grid p { font-size: 0.8em; }
   footer { font-size: 0.8em; }
