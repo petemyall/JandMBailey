@@ -353,9 +353,9 @@ footer {
    RESPONSIVE TWEAKS
 -----------------------------------------------------*/
 @media (max-width: 599px) {
-  body.index-page .main-heading { font-size: 1.50em; }
-  body.index-page .subtitle { font-size: 1.25em; margin-bottom: 5px; }
-  .description-box { font-size: 1.25em; margin: 1px; padding: 2px; }
+  body.index-page .main-heading { font-size: 1.25em; }
+  body.index-page .subtitle { font-size: 1em; margin-bottom: 5px; }
+  .description-box { font-size: 1em; margin: 1px; padding: 2px; }
   .narrative-box { margin-bottom: -25px; padding: 0 10px; }
 
   /* Guides side by side */
