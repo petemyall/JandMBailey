@@ -366,7 +366,7 @@ footer {
    .guides-box h3 { margin: 3px 0 2px; }
    
   .guides-box p { font-size: 0.9em; margin: 0.5px 0; }
-   .people-box { font-size: 0.9em; padding: 2px; }
+   .people-box { font-size: 0.9em; line-height: 1; padding: 2px; }
    
   .members-grid { grid-template-columns: 1fr 1fr; font-size: 0.75em; }
   .members-grid p { font-size: 0.9em; }
