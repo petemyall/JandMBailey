@@ -388,11 +388,6 @@ footer {
     grid-template-columns: 1fr 1fr;   /* 2 equal columns */
     gap: 8px;                         /* tighter gap */
    }
-   /* Center a single button in its grid */
-.button-grid:only-child,
-.button-grid:has(> :only-child) {
-  justify-content: center;
-}
   footer { font-size: 0.8em; }
 }
 
