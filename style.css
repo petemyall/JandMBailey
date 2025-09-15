@@ -354,7 +354,7 @@ footer {
    h1 { font-size: 1.1em; }
    h2, h3 { font-size: 0.75em; }
    body.journal-index .description-box { margin: 0; padding: 2px; }
-   
+   .people-box { margin-bottom: 1px; }
   /* Guides side by side */
   .guides-box {
     grid-template-columns: 1fr 1fr;   /* two columns on mobiles */
