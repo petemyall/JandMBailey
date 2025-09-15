@@ -377,6 +377,8 @@ footer {
    margin: 0;
    font-size: 1rem;
    }
+   .journey-link { margin: 8px 0; }
+   
    .journal-index .button-grid {
     grid-template-columns: 1fr 1fr;   /* 2 equal columns */
     gap: 8px;                         /* tighter gap */
