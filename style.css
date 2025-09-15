@@ -352,7 +352,8 @@ footer {
   .narrative-box { margin-bottom: -25px; padding: 0 10px; }
    h1 { font-size: 1em; }
    h2, h3 { font-size: 0.8em; }
-   .people-box h2 { font-size: 0.75em; }
+   .people-box h2 { font-size: 0.85em; }
+   .members-box h3 { font-size: 0.85em; }
    body.journal-index .description-box { margin: 0; padding: 2px; }
    .people-box { margin-bottom: 1px; }
   /* Guides side by side */
