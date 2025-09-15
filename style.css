@@ -395,6 +395,9 @@ footer {
   padding: 2px 4px;
   font-size: 0.8rem;
    }
+  /* journal page adjustments */
+   .description-box ul { font-size: 0.95em; line-height: 1.2; }
+   
   footer { font-size: 0.8em; }
 }
 
