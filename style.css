@@ -68,13 +68,6 @@ body.travel-page::before {
   background: rgba(255,255,255,0.6);
   z-index: -1;
 }
-body.journal-page::before {
-  content: "";
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(255,255,255,0.6);
-  z-index: -1;
-}
 
 /* ----------------------------------------------------
    HEADINGS
@@ -233,7 +226,7 @@ body.journal-page .description-box {
   background: rgba(94, 92, 93, 0.3);
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 10px;
 }
 
@@ -250,7 +243,6 @@ body.journal-page .description-box {
 
 /* Make sure keycap emoji render */
 .album-banner .day-icons a {
-  font-family: system-ui, "Noto Color Emoji", "Apple Color Emoji", "Segoe UI Emoji", "Twemoji Mozilla", "Noto Serif JP", serif;
   line-height: 1; /* helps vertical centering */
   display: inline-flex;
   align-items: center;
@@ -375,7 +367,7 @@ footer {
    .guides-box h3 { margin: 3px 0 2px; }
    
   .guides-box p { font-size: 0.6em; margin: 0.5px 0; }
-   .peoples-box { font-size: 0.6em; }
+   .people-box { font-size: 0.6em; }
    
   .members-grid { grid-template-columns: 1fr 1fr; font-size: 0.75em; }
   .members-grid p { font-size: 0.75em; }
