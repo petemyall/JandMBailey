@@ -391,6 +391,10 @@ footer {
    .journal-index .button-grid.full-width-mobile {
       grid-template-columns: 1fr;
    }
+   .back-btn {
+  padding: 2px 4px;
+  font-size: 0.8rem;
+   }
   footer { font-size: 0.8em; }
 }
 
