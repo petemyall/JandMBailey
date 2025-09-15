@@ -351,7 +351,7 @@ footer {
   .description-box { font-size: 0.82em; }
   .narrative-box { margin-bottom: -25px; padding: 0 10px; }
    h1 { font-size: 1em; }
-   h2, h3 { font-size: 0.9em; }
+   h2, h3 { font-size: 0.85em; }
    body.journal-index .description-box { margin: 0; padding: 2px; }
    .people-box { margin-bottom: 1px; }
   /* Guides side by side */
@@ -365,18 +365,18 @@ footer {
   }
    .guides-box h3 { margin: 3px 0 2px; }
    
-  .guides-box p { font-size: 0.6em; margin: 0.5px 0; }
-   .people-box { font-size: 0.8em; }
+  .guides-box p { font-size: 0.9em; margin: 0.5px 0; }
+   .people-box { font-size: 0.9em; }
    
   .members-grid { grid-template-columns: 1fr 1fr; font-size: 0.75em; }
-  .members-grid p { font-size: 1.2em; }
+  .members-grid p { font-size: 0.9em; }
 
   .journey-btn {
    padding: 0.3em 0.6em;
    margin: 0;
    font-size: 1rem;
    }
-   .journey-link { margin: 5px 0; }
+   .journey-link { margin: 2px 0; }
    
    .journal-index .button-grid {
     grid-template-columns: 1fr 1fr;   /* 2 equal columns */
