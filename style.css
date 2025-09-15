@@ -350,8 +350,8 @@ footer {
   body.index-page .description-box { margin: 1px; padding: 2px; }
   .description-box { font-size: 0.82em; }
   .narrative-box { margin-bottom: -25px; padding: 0 10px; }
-   h1 { font-size: 1.1em; }
-   h2, h3 { font-size: 1em; }
+   h1 { font-size: 1em; }
+   h2, h3 { font-size: 0.9em; }
    body.journal-index .description-box { margin: 0; padding: 2px; }
    .people-box { margin-bottom: 1px; }
   /* Guides side by side */
@@ -366,7 +366,7 @@ footer {
    .guides-box h3 { margin: 3px 0 2px; }
    
   .guides-box p { font-size: 0.6em; margin: 0.5px 0; }
-   .people-box { font-size: 0.6em; }
+   .people-box { font-size: 0.8em; }
    
   .members-grid { grid-template-columns: 1fr 1fr; font-size: 0.75em; }
   .members-grid p { font-size: 1.2em; }
