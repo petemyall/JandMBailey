@@ -358,9 +358,9 @@ footer {
   body.index-page h2 { font-size: 1em; }
   body.index-page .description-box { font-size: 0.85em; margin: 1px; padding: 2px; }
   .narrative-box { margin-bottom: -25px; padding: 0 10px; }
-   h1 { font-size: 0.75em; }
-
-
+   h1 { font-size: 1em; }
+   h2, h3 { font-size: 0.75em; }
+   
   /* Guides side by side */
   .guides-box {
     grid-template-columns: 1fr 1fr;   /* two columns on mobiles */
@@ -370,14 +370,11 @@ footer {
     padding: 4px;                     /* slightly tighter padding */
     font-size: 0.75em;                 /* smaller font for fit */
   }
-   .guides-box h3 { font-size: 0.75em; margin: 3px 0 2px; }
+   .guides-box h3 { margin: 3px 0 2px; }
    
   .guides-box p { font-size: 0.6em; margin: 0.5px 0; }
    .peoples-box { font-size: 0.6em; }
-   .peoples-box h2{ font-size: 0.75em; }
-   .peoples-box h3{ font-size: 0.75em; }
    
-
   .members-grid { grid-template-columns: 1fr 1fr; font-size: 0.75em; }
   .members-grid p { font-size: 0.75em; }
 
