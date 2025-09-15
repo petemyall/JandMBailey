@@ -396,8 +396,8 @@ footer {
    }
   /* journal page adjustments */
    .hotel-title h1 { font-size: 1em; }
-   .description-box ul { font-size: 0.85em; line-height: 0.95; }
-   .hotel-thumb { flex: 0 0 40px; }
+   .description-box ul { font-size: 0.85em; line-height: 1; }
+   .hotel-thumb { flex: 0 0 75px; }
    .stay-dates { font-size: 0.9em }
    
   footer { font-size: 0.8em; }
