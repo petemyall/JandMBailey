@@ -352,7 +352,7 @@ footer {
   .description-box { font-size: 0.82em; }
   .narrative-box { margin-bottom: -25px; padding: 0 10px; }
    h1 { font-size: 1.1em; }
-   h2, h3 { font-size: 0.85em; }
+   h2, h3 { font-size: 0.9em; }
    body.journal-index .description-box { margin: 0; padding: 2px; }
    .people-box { margin-bottom: 1px; }
   /* Guides side by side */
@@ -370,7 +370,7 @@ footer {
    .people-box { font-size: 0.6em; }
    
   .members-grid { grid-template-columns: 1fr 1fr; font-size: 0.75em; }
-  .members-grid p { font-size: 1em; }
+  .members-grid p { font-size: 1.2em; }
 
   .journey-btn {
    padding: 0.3em 0.6em;
