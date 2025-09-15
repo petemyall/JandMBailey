@@ -393,6 +393,7 @@ footer {
    }
    .btn-card strong { display: block; font-size: 0.85rem; line-height: 1.1; }
 .btn-card small { display: block; margin-top: 2px; opacity: .8; }
+   .btn-card { font-size: 0.85em }
    .back-btn {
   padding: 2px 4px;
   font-size: 0.8rem;
