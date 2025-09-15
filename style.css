@@ -406,6 +406,8 @@ footer {
    .description-box ul { font-size: 0.85em; line-height: 1; }
    .hotel-thumb { flex: 0 0 75px; }
    .hotel-title p { font-size: 0.75em }
+   body.journal-page .description-box {
+      
    
    
   footer { font-size: 0.8em; }
