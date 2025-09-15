@@ -391,7 +391,7 @@ footer {
    .journal-index .button-grid.full-width-mobile {
       grid-template-columns: 1fr;
    }
-   .btn-card { font-size: 0.8em }
+   .btn-card { font-size: 0.8em; padding: 7px 8px; }
    .btn-card strong { display: block; font-size: 1.05rem; line-height: 1; }
    .btn-card small { display: block; margin-top: 2px; opacity: .8; }
    
