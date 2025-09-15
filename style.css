@@ -1,4 +1,4 @@
-
+u
 /* ----------------------------------------------------
    FONTS & GLOBAL BASE
 -----------------------------------------------------*/
@@ -396,6 +396,7 @@ footer {
   font-size: 0.8rem;
    }
   /* journal page adjustments */
+   .hotel-title h1 { font-size: 1em; }
    .description-box ul { font-size: 0.95em; line-height: 1.2; }
    
   footer { font-size: 0.8em; }
