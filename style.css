@@ -397,16 +397,15 @@ footer {
    .btn-card strong { display: block; font-size: 1em; line-height: 1; }
    .btn-card small { display: block; margin-top: 2px; opacity: .8; }
    
-   .back-btn {
-  padding: 2px 4px;
-  font-size: 0.8rem;
-   }
-  /* journal page adjustments */
+   .back-btn { padding: 2px 4px; font-size: 0.8rem; }
+   
+    /* journal page adjustments */
    .hotel-title h1 { font-size: 1em; }
    .description-box ul { font-size: 0.85em; line-height: 1; }
    .hotel-thumb { flex: 0 0 75px; }
    .hotel-title p { font-size: 0.75em }
    body.journal-page .description-box { max-height: 50vh; overflow-y: auto; }
+   .album-banner .day-icons a { width: 2.8rem; height: 2.8rem; }
       
    
    
