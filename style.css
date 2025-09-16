@@ -273,6 +273,21 @@ body.journal-page .description-box {
   transform: translateY(-2px);
   box-shadow: 2px 3px 6px rgba(0,0,0,0.2);
 }
+/* Journal pages: snug the banner to the footer */
+body.journal-page .button-grid.button-grid--full {
+  /* default was: margin: 18px 0 8px; */
+  margin: 12px 0 2px;   /* small gap above, tiny gap below */
+}
+
+body.journal-page .album-banner {
+  margin-bottom: 0;      /* no extra space after the banner */
+}
+
+/* Optional: slightly slimmer footer padding on journal pages */
+body.journal-page footer.site-footer {
+  padding-top: 3px;      /* was 5px */
+  padding-bottom: 4px;   /* tweak if you want it even tighter */
+}
 
 /* ----------------------------------------------------
    INDEX PAGE: “Follow Our Journey” CTA — RESTORED
@@ -407,9 +422,9 @@ footer {
    body.journal-page .description-box { max-height: 50vh; overflow-y: auto; }
    .album-banner .day-icons a { width: 2.1rem; height: 2.1rem; font-size: 1rem; }
    .album-banner .label { font-size: 1rem; }
-      
-   
-   
+  body.journal-page .button-grid.button-grid--full { margin: 8px 0 1px; }
+  body.journal-page footer.site-footer { padding-top: 2px; padding-bottom: 3px; }
+                    
   footer { font-size: 0.8em; }
 }
 
