@@ -420,7 +420,7 @@ footer {
    .hotel-thumb { flex: 0 0 75px; }
    .hotel-title p { font-size: 0.75em }
    .hotel-title .stay-dates { font-size: 0.75em }
-   body.journal-page .description-box { max-height: 50vh; overflow-y: auto; }
+   body.journal-page .description-box { overflow-y: auto; }
    .album-banner .day-icons a { width: 2.1rem; height: 2.1rem; font-size: 1rem; }
    .album-banner .label { font-size: 1rem; }
   body.journal-page .button-grid.button-grid--full { margin: 8px 0 1px; }
