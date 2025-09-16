@@ -430,3 +430,22 @@ footer {
 }
 
 /* -------------------- END --------------------------*/
+/* =====================================================
+   APPEND-ONLY: JOURNAL PAGES — MOBILE AUTO-FIT BOX
+   (Preserves all existing media queries; scoped narrowly)
+   ===================================================== */
+@media (max-width: 599px) {
+  body.journal-page main {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-height: 0;
+  }
+  body.journal-page .description-box {
+    flex: 1 1 auto;
+    min-height: 0;
+    max-width: 100%;
+    overflow-y: auto;
+    max-height: 80svh;
+  }
+}
