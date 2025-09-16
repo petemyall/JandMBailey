@@ -253,10 +253,10 @@ body.journal-page .description-box {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2.8rem;
-  height: 2.8rem;
+  width: 2.4rem;
+  height: 2.4rem;
   border-radius: 8px;         /* change to 50% for circles */
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-decoration: none;
   background: #f7c8d0;           /* white button background */
   border: 1px solid #ccc;     /* subtle border */
