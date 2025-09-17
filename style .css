@@ -352,6 +352,17 @@ footer {
   margin-top: auto;
   padding-bottom: calc(5px + env(safe-area-inset-bottom));
 }
+/* INDEX PAGE: make the wrapper control the footer placement (not <body>) */
+body.index-page {
+  display: block;          /* stop flexing the body on index */
+  min-height: auto;        /* let wrapper take over height */
+}
+
+body.index-page .page-wrapper {
+  min-height: 100svh;      /* safe viewport height on tablets/phones */
+  display: flex;
+  flex-direction: column;  /* stack header/content/footer */
+}
 
 /* ----------------------------------------------------
    RESPONSIVE TWEAKS
@@ -419,17 +430,7 @@ footer {
    
   footer { font-size: 0.8em; }
 }
-/* INDEX PAGE: make the wrapper control the footer placement (not <body>) */
-body.index-page {
-  display: block;          /* stop flexing the body on index */
-  min-height: auto;        /* let wrapper take over height */
-}
 
-body.index-page .page-wrapper {
-  min-height: 100svh;      /* safe viewport height on tablets/phones */
-  display: flex;
-  flex-direction: column;  /* stack header/content/footer */
-}
 
 body.index-page footer.site-footer {
   margin-top: auto;        /* push footer to the bottom of the wrapper */
