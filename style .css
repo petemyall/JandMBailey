@@ -288,9 +288,9 @@ body.journal-page .description-box {
 }
 .journey-btn {
   display: inline-block;
-  padding: 0.6em 1.2em;
-  margin: 0.5em 0;
-  font-size: 1.25rem;
+  padding: 0.2em 0.9em;
+  margin: 0;
+  font-size: 1.15rem;
   font-weight: bold;
   color: #fff;
   background: linear-gradient(135deg, #ff6ec4, #7873f5);
