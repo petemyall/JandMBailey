@@ -350,6 +350,7 @@ footer {
   font-size: 0.75em;
   letter-spacing: 1px;
   margin-top: auto;
+  padding-bottom: calc(5px + env(safe-area-inset-bottom));
 }
 
 /* ----------------------------------------------------
