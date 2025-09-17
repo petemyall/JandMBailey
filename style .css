@@ -88,14 +88,14 @@ body.travel-page h2 { font-size: 1em; }
 body.index-page .main-heading {
   text-align: center;
   margin: 20px;
-  font-size: 2.50em;
+  font-size: 2.4em;
   font-weight: 900;
   color: #ffffff;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.8), -1px -1px 0 rgba(0,0,0,0.6);
 }
 body.index-page .subtitle {
   text-align: center;
-  font-size: 1.75em;
+  font-size: 1.7em;
   font-weight: 600;
   color: #f2cccc;
   text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
