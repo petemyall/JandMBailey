@@ -17,11 +17,16 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  min-height: 100dvh;
   color: #3a3a3a;
   text-align: center;
+}
+body {
+  /* …your existing properties… */
+  min-height: 100vh;   /* fallback */
+  min-height: 100dvh;  /* dynamic VH (some tablets) */
+  min-height: 100svh;  /* safe VH: fixes bottom clipping on tablets */
+  display: flex;
+  flex-direction: column;
 }
 
 /* Main content wrapper */
