@@ -147,7 +147,7 @@ body.index-page .subtitle {
 .description-box li { margin-bottom: 0.9em; }
 
 body.journal-page .description-box {
-  background: rgba(247, 200, 208, 0.6);
+  background: rgba(247, 200, 208, 0.3);
   color: #b30000;
   max-width: 800px;
   margin: 5px auto;
