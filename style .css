@@ -371,16 +371,30 @@ body.index-page .page-wrapper {
    RESPONSIVE TWEAKS
 -----------------------------------------------------*/
 @media (max-width: 599px) {
+@media (max-width: 599px) {
   body.index-page .main-heading { font-size: 1.25em; }
   body.index-page .subtitle { font-size: 1em; margin-bottom: 5px; }
   body.index-page .description-box { font-size: 0.82em; margin: 1px; padding: 2px; }
   .narrative-box { margin-bottom: -25px; padding: 0 10px; }
-   h1 { font-size: 1em; }
-   h2, h3 { font-size: 0.8em; }
-   .people-box h2 { font-size: 0.85em; }
-   .members-box h3 { font-size: 0.85em; }
-   body.journal-index .description-box { margin: 0; padding: 2px; }
-   .people-box { margin-bottom: 1px; }
+
+  h1 { font-size: 1em; }
+  h2, h3 { font-size: 0.8em; }
+  .people-box h2 { font-size: 0.85em; }
+  .members-box h3 { font-size: 0.85em; }
+  body.journal-index .description-box { margin: 0; padding: 2px; }
+
+  /* PEOPLE BOX ADJUSTMENTS */
+  .people-box {
+    margin-bottom: 1px;
+    font-size: 0.9em;
+    line-height: 1;
+    padding: 6px;         /* a little more breathing room */
+    max-width: 100%;      /* allow it to expand fully */
+    width: 95%;           /* nearly full width, small inset */
+    margin-left: auto;    /* keep centered */
+    margin-right: auto;
+  }
+
   /* Guides side by side */
   .guides-box {
     grid-template-columns: 1fr 1fr;   /* two columns on mobiles */
@@ -390,59 +404,47 @@ body.index-page .page-wrapper {
     padding: 4px;                     /* slightly tighter padding */
     font-size: 0.75em;                 /* smaller font for fit */
   }
-   .guides-box h3 { margin: 3px 0 2px; }
-   
+  .guides-box h3 { margin: 3px 0 2px; }
   .guides-box p { font-size: 0.9em; margin: 0.5px 0; }
-   .people-box { font-size: 0.9em; line-height: 1; padding: 2px; }
-   
-  .members-grid { grid-template-columns: 1fr 1fr 1fr; font-size: 0.75em; gap: 5px 5px 5px; }
+
+  .members-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: 0.75em;
+    gap: 5px 5px 5px;
+  }
   .members-grid p { font-size: 0.75em; }
 
   .journey-btn {
-   padding: 0.3em 0.6em;
-   margin: 0;
-   font-size: 1rem;
-   }
-   .journey-link { margin: 2px 0; }
-   
-   .journal-index .button-grid {
+    padding: 0.3em 0.6em;
+    margin: 0;
+    font-size: 1rem;
+  }
+  .journey-link { margin: 2px 0; }
+
+  .journal-index .button-grid {
     grid-template-columns: 1fr 1fr;   /* 2 equal columns */
     gap: 8px;                         /* tighter gap */
-   }
-   .journal-index .button-grid.full-width-mobile {
-      grid-template-columns: 1fr;
-   }
-   .btn-card { font-size: 0.8em; padding: 7px 8px; }
-   .btn-card strong { display: block; font-size: 1em; line-height: 1; }
-   .btn-card small { display: block; margin-top: 2px; opacity: .8; }
-   
-   .back-btn { padding: 2px 4px; font-size: 0.8rem; }
-   
-    /* journal page adjustments */
-   .hotel-title h1 { font-size: 1em; }
-   .description-box ul { font-size: 0.85em; line-height: 1; }
-   .hotel-thumb { flex: 0 0 75px; }
-   .hotel-title p { font-size: 0.75em }
-   .hotel-title .stay-dates { font-size: 0.75em }
-   body.journal-page .description-box { max-height: 75vh; overflow-y: auto; }
-   .album-banner .day-icons a { width: 2.1rem; height: 2.1rem; font-size: 1rem; }
-   .album-banner .label { font-size: 1rem; }
-      
-   
-   
+  }
+  .journal-index .button-grid.full-width-mobile {
+    grid-template-columns: 1fr;
+  }
+  .btn-card { font-size: 0.8em; padding: 7px 8px; }
+  .btn-card strong { display: block; font-size: 1em; line-height: 1; }
+  .btn-card small { display: block; margin-top: 2px; opacity: .8; }
+
+  .back-btn { padding: 2px 4px; font-size: 0.8rem; }
+
+  /* journal page adjustments */
+  .hotel-title h1 { font-size: 1em; }
+  .description-box ul { font-size: 0.85em; line-height: 1; }
+  .hotel-thumb { flex: 0 0 75px; }
+  .hotel-title p { font-size: 0.75em }
+  .hotel-title .stay-dates { font-size: 0.75em }
+  body.journal-page .description-box { max-height: 75vh; overflow-y: auto; }
+  .album-banner .day-icons a { width: 2.1rem; height: 2.1rem; font-size: 1rem; }
+  .album-banner .label { font-size: 1rem; }
+
   footer { font-size: 0.8em; }
-}
-
-
-body.index-page footer.site-footer {
-  margin-top: auto;        /* push footer to the bottom of the wrapper */
-  position: relative;      /* ensure it participates in flow */
-  padding-bottom: calc(5px + env(safe-area-inset-bottom));
-}
-
-/* Ensure nothing after the last section adds stray space */
-body.index-page .page-wrapper > :last-child {
-  margin-bottom: 0;
 }
 
 /* -------------------- END --------------------------*/
