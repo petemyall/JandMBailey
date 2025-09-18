@@ -387,14 +387,13 @@ body.index-page .page-wrapper {
 
   h1 { font-size: 1em; }
   h2, h3 { font-size: 0.8em; }
-  .people-box h2 { font-size: 0.9em; }
+  
   .members-box h3 { font-size: 0.9em; }
   body.journal-index .description-box { margin: -5px; padding: 2px; }
 
   /* PEOPLE BOX ADJUSTMENTS */
   .people-box {
     margin-bottom: 1px;
-    font-size: 0.9em;
     line-height: 1;
     padding: 6px;         /* a little more breathing room */
     max-width: 100%;      /* allow it to expand fully */
@@ -402,6 +401,7 @@ body.index-page .page-wrapper {
     margin-left: auto;    /* keep centered */
     margin-right: auto;
   }
+   .people-box h2 { font-size: 1em; }
 
   /* Guides side by side */
   .guides-box {
@@ -417,10 +417,9 @@ body.index-page .page-wrapper {
 
   .members-grid {
     grid-template-columns: 1fr 1fr 1fr;
-    font-size: 0.75em;
     gap: 5px 5px 5px;
   }
-  .members-grid p { font-size: 0.85em; }
+  .members-grid p { font-size: 0.9em; }
 
   .journey-btn {
     padding: 0.3em 0.6em;
