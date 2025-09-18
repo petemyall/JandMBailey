@@ -430,7 +430,7 @@ body.index-page .page-wrapper {
   .journal-index .button-grid.full-width-mobile {
     grid-template-columns: 1fr;
   }
-  .btn-card { font-size: 0.8em; padding: 5px 8px; }
+  .btn-card { font-size: 0.8em; padding: 4px 8px; }
   .btn-card strong { display: block; font-size: 1em; line-height: 1; }
   .btn-card small { display: block; margin-top: 2px; opacity: .8; }
 
