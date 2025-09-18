@@ -34,6 +34,9 @@ body {
   flex: 1 0 auto;
   display: flex;
   flex-direction: column;
+   max-width: 900px;
+  margin: 0 auto;
+  padding: 0 10px;
 }
 
 /* Journal pages: keep content in a neat centered column  — NEW */
