@@ -155,7 +155,7 @@ body.journal-page .description-box {
   display: block;
 }
 
-body.journal-index .description-box { font-size: 1.25px; }
+body.journal-index .description-box { font-size: 1.1px; }
    
 /* Narrative box (index) */
 .narrative-box {
