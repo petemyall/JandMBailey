@@ -93,7 +93,7 @@ h1, h2 {
 }
 body.travel-page h2 { font-size: 1em; }
 
-body.index-page .main-heading {
+.main-heading {
   text-align: center;
   margin: 20px;
   font-size: 2.4em;
@@ -101,7 +101,7 @@ body.index-page .main-heading {
   color: #ffffff;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.8), -1px -1px 0 rgba(0,0,0,0.6);
 }
-body.index-page .subtitle {
+.subtitle {
   text-align: center;
   font-size: 1.7em;
   font-weight: 600;
@@ -355,17 +355,7 @@ footer {
   margin-top: auto;
   padding-bottom: calc(5px + env(safe-area-inset-bottom));
 }
-/* INDEX PAGE: make the wrapper control the footer placement (not <body>) */
-body.index-page {
-  display: block;          /* stop flexing the body on index */
-  min-height: auto;        /* let wrapper take over height */
-}
 
-body.index-page .page-wrapper {
-  min-height: 100svh;      /* safe viewport height on tablets/phones */
-  display: flex;
-  flex-direction: column;  /* stack header/content/footer */
-}
 
 /* ----------------------------------------------------
    RESPONSIVE TWEAKS
