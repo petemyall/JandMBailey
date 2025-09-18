@@ -383,7 +383,7 @@ body.index-page .page-wrapper {
   h2, h3 { font-size: 0.8em; }
   .people-box h2 { font-size: 0.9em; }
   .members-box h3 { font-size: 0.9em; }
-  body.journal-index .description-box { margin: 0; padding: 2px; }
+  body.journal-index .description-box { margin: -5px; padding: 2px; }
 
   /* PEOPLE BOX ADJUSTMENTS */
   .people-box {
