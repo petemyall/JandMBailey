@@ -468,7 +468,7 @@ body.index-page .page-wrapper {
   /* Album banner full width on journal pages */
   
   body.journal-page .album-banner {
-    max-width: 98%;
+    width: 100%;
     box-sizing: border-box;
     flex-direction: row;         /* row layout, not stacked */
     justify-content: space-between;
