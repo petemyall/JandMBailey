@@ -167,7 +167,7 @@ body.journal-page .description-box {
   text-align: center;
   display: block;
 }
-
+body.keio-plaza .description-box li { font-size: 0.95em; }
 body.journal-index .description-box { font-size: 0.9em; }
    
 /* Narrative box (index) */
