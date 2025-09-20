@@ -466,10 +466,9 @@ body.index-page .page-wrapper {
   .album-banner .day-icons a { min-width: 1.5rem; height: 1.5rem; font-size: 0.75rem; }
    
   /* Album banner full width on journal pages */
+  
   body.journal-page .album-banner {
-    width: 100%;
-  body.journal-page .album-banner {
-    width: 100%;
+    max-width: 98%;
     box-sizing: border-box;
     flex-direction: row;         /* row layout, not stacked */
     justify-content: space-between;
