@@ -399,11 +399,11 @@ body.index-page .page-wrapper {
   body.travel-page .description-box p { font-size: 0.83em; margin: 1px; padding: 0.5px; }
   body.travel-page .description-box p strong { font-size: 0.85em; margin: -1px; padding: 0.5px; }
   body.travel-page .description-box h2 { font-size: 0.9em; margin: -1px; padding: 0.5px; }
-  .hotel-title.keio-plaza ~ .description-box {
-  max-height: 30vh;
-  margin-top: 5px;
-  margin-bottom: 2px;
-}
+  body.keio-plaza-page .description-box {
+    max-height: 50vh;   /* or 30vh */
+    margin-top: 10px;
+    margin-bottom: 5px;
+    overflow: auto;
    /* PEOPLE BOX ADJUSTMENTS */
   .people-box {
     margin-bottom: 1px;
