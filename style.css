@@ -386,7 +386,6 @@ body.index-page .page-wrapper {
    RESPONSIVE TWEAKS
 -----------------------------------------------------*/
 @media (max-width: 599px) {
-@media (max-width: 599px) {
   body.index-page .main-heading { font-size: 1.5em; }
   body.index-page .subtitle { font-size: 1.25em; margin-bottom: 5px; }
   body.index-page .description-box { font-size: 0.82em; margin: 1px; padding: 2px; }
