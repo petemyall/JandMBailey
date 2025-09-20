@@ -463,7 +463,7 @@ body.index-page .page-wrapper {
   .hotel-title p { font-size: 0.75em }
   .hotel-title .stay-dates { font-size: 0.75em }
   
-  .album-banner .day-icons a { min-width: 1.8rem; height: 1.8rem; font-size: 0.9rem; }
+  .album-banner .day-icons a { min-width: 1.5rem; height: 1.5rem; font-size: 0.75rem; }
    
   /* Album banner full width on journal pages */
   body.journal-page .album-banner {
@@ -471,15 +471,15 @@ body.index-page .page-wrapper {
     box-sizing: border-box;
     flex-direction: column;   /* stack label above buttons */
     align-items: stretch;
-    gap: 8px;
-    padding: 8px 10px;
+    gap: 4px;
+    padding: 2px 4px;
   }
 
   /* Center the label nicely */
   body.journal-page .album-banner .label {
     text-align: center;
     margin: 0;
-    font-size: 1rem;          /* tweak if you want smaller text */
+    font-size: 0.85rem;          /* tweak if you want smaller text */
   }
 
   /* Allow up to 5 buttons across, wrap as needed */
@@ -494,8 +494,8 @@ body.index-page .page-wrapper {
   body.journal-page .album-banner .day-icons a {
     width: 100%;
     text-align: center;
-    padding: 0.5em 0.9em;
-    font-size: 0.95rem;       /* reduce slightly on small screens */
+    padding: 0.2em 0.3em;
+    font-size: 0.8rem;       /* reduce slightly on small screens */
   }
 
   footer { font-size: 0.8em; }
