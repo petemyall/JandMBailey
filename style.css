@@ -486,18 +486,19 @@ body.index-page .page-wrapper {
 
   /* Buttons spread out on the right */
   body.journal-page .album-banner .day-icons {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    display: flex;
+    justify-content: flex-end;
     gap: 6px;
     flex: 1;                     /* take the rest of the row */
   }
 
   /* Buttons scale cleanly */
   body.journal-page .album-banner .day-icons a {
+     width: 80px;
     text-align: center;
-    padding: 0.45em 0.6em;
+    padding: 0.45em 0;
     font-size: 0.9rem;
-    width: 100%;
+    
   }
 
   footer { font-size: 0.8em; }
