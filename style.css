@@ -273,22 +273,21 @@ body.journal-index .description-box { font-size: 0.9em; }
 
 /* Make sure keycap emoji render */
 .album-banner .day-icons a {
-  line-height: 1; /* helps vertical centering */
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2.8rem;
-  height: 2.8rem;
-  border-radius: 8px;         /* change to 50% for circles */
+  padding: 0.6em 1.4em;   /* controls button size */
+  min-width: 6rem;        /* sets a wider minimum size */
+  height: auto;           /* let height adjust naturally */
+  border-radius: 8px;
   font-size: 1.1rem;
   text-decoration: none;
-  background: #f7c8d0;           /* white button background */
-  border: 1px solid #ccc;     /* subtle border */
-  color: #b30000;             /* theme red */
+  background: #f7c8d0;
+  border: 1px solid #ccc;
+  color: #b30000;
   box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
   transition: all 0.2s ease-in-out;
 }
-
 .album-banner .day-icons a:hover,
 .album-banner .day-icons a:focus {
   background: #b30000;
