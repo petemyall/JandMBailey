@@ -403,7 +403,8 @@ body.index-page .page-wrapper {
     max-height: 50vh;   /* or 30vh */
     margin-top: 10px;
     margin-bottom: 5px;
-    overflow: auto;
+    overflow: auto; }
+   
    /* PEOPLE BOX ADJUSTMENTS */
   .people-box {
     margin-bottom: 1px;
