@@ -267,6 +267,7 @@ body.journal-index .description-box { font-size: 0.9em; }
 }
 
 .album-banner .day-icons {
+   padding: 6px 8px;
   display: flex;
   gap: 8px;
 }
