@@ -465,42 +465,6 @@ body.index-page .page-wrapper {
   
   .album-banner .day-icons a { min-width: 1.5rem; height: 1.5rem; font-size: 0.75rem; }
    
-  /* Album banner full width on journal pages */
-  
-  body.journal-page .album-banner {
-    width: 100%;
-    box-sizing: border-box;
-    flex-direction: row;         /* row layout, not stacked */
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px 10px;
-    gap: 10px;
-  }
-
-  /* Label stays on the left */
-  body.journal-page .album-banner .label {
-    flex: 0 0 auto;              /* don't stretch */
-    font-size: 0.95rem;          /* tweak if needed */
-    margin: 0;
-  }
-
-  /* Buttons spread out on the right */
-  body.journal-page .album-banner .day-icons {
-    display: flex;
-    justify-content: flex-end;
-    gap: 6px;
-    flex: 1;                     /* take the rest of the row */
-  }
-
-  /* Buttons scale cleanly */
-  body.journal-page .album-banner .day-icons a {
-     width: 80px;
-    text-align: center;
-    padding: 0.45em 0;
-    font-size: 0.9rem;
-    
-  }
-
   footer { font-size: 0.8em; }
 }
 
