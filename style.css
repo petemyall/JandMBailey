@@ -401,7 +401,7 @@ body.index-page .page-wrapper {
   body.travel-page .description-box h2 { font-size: 0.9em; margin: -1px; padding: 0.5px; }
    body.journal-page .description-box { max-height: 75vh; overflow-y: auto; }
   body.keio-plaza-page .description-box {
-    max-height: 50vh;   /* or 30vh */
+    max-height: 60vh;   /* or 30vh */
     margin-top: 10px;
     margin-bottom: 5px;
     overflow: auto; }
