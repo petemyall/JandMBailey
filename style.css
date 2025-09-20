@@ -468,37 +468,41 @@ body.index-page .page-wrapper {
   /* Album banner full width on journal pages */
   body.journal-page .album-banner {
     width: 100%;
+  body.journal-page .album-banner {
+    width: 100%;
     box-sizing: border-box;
-    flex-direction: column;   /* stack label above buttons */
-    align-items: stretch;
-    gap: 4px;
-    padding: 2px 4px;
+    flex-direction: row;         /* row layout, not stacked */
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 10px;
+    gap: 10px;
   }
 
-  /* Center the label nicely */
+  /* Label stays on the left */
   body.journal-page .album-banner .label {
-    text-align: center;
+    flex: 0 0 auto;              /* don't stretch */
+    font-size: 0.95rem;          /* tweak if needed */
     margin: 0;
-    font-size: 0.85rem;          /* tweak if you want smaller text */
   }
 
-  /* Allow up to 5 buttons across, wrap as needed */
+  /* Buttons spread out on the right */
   body.journal-page .album-banner .day-icons {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
     gap: 6px;
-    width: 100%;
+    flex: 1;                     /* take the rest of the row */
   }
 
-  /* Buttons fill their cell cleanly */
+  /* Buttons scale cleanly */
   body.journal-page .album-banner .day-icons a {
-    width: 100%;
     text-align: center;
-    padding: 0.2em 0.3em;
-    font-size: 0.8rem;       /* reduce slightly on small screens */
+    padding: 0.45em 0.6em;
+    font-size: 0.9rem;
+    width: 100%;
   }
 
   footer { font-size: 0.8em; }
 }
+
 
 /* -------------------- END --------------------------*/
