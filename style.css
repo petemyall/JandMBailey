@@ -398,6 +398,7 @@ body.index-page .page-wrapper {
   .members-box h3 { font-size: 0.9em; }
   body.journal-index .description-box { margin: -5px; padding: 2px; }
   body.travel-page .description-box { font-size: 0.85em; margin: 1px; padding: 2px; }
+  body.travel-page .description-box p strong { font-size: 0.85em; margin: 1px; padding: 2px; }
   /* PEOPLE BOX ADJUSTMENTS */
   .people-box {
     margin-bottom: 1px;
