@@ -144,12 +144,12 @@ body.index-page .subtitle {
 .description-box strong { color: #0077b6; font-size: 1.2em; }
 
 /* Daily Activities list — adjusted spacing/size */
-.description-box ul {
-  margin: 0;
-  padding-left: 2em;
-  list-style-position: outside;
+body.journal-page .description-box ul {
+  text-align: left;          /* override container */
+  list-style: disc outside;  /* explicit */
+  padding-left: 1.2em;       /* 2em may feel indented on mobiles */
 }
-.description-box li { margin-bottom: 0.9em; }
+body.jounal-page .description-box li { margin-bottom: 0.9em; }
 
 body.journal-page .description-box {
   background: rgba(247, 200, 208, 0.3);
