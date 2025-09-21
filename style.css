@@ -145,8 +145,6 @@ body.index-page .subtitle {
 
 /* Daily Activities list — adjusted spacing/size */
 .description-box ul {
-  font-size: 0.95em;
-  line-height: 1.2;
   margin: 0;
   padding-left: 2em;
   list-style-position: outside;
