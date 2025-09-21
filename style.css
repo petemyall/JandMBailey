@@ -406,7 +406,7 @@ body.kyoto-page .description-box { max-height: 60vh; margin-top: 10px; overflow:
   body.travel-page .description-box p { font-size: 0.83em; margin: 1px; padding: 0.5px; }
   body.travel-page .description-box p strong { font-size: 0.85em; margin: -1px; padding: 0.5px; }
   body.travel-page .description-box h2 { font-size: 0.9em; margin: -1px; padding: 0.5px; }
-   body.journal-page .description-box { max-height: 75vh; overflow-y: auto; }
+
    /* ----------------------------------------------------
    HOTEL PAGE SPECIFIC
    -----------------------------------------------------*/
@@ -414,7 +414,7 @@ body.kyoto-page .description-box { max-height: 60vh; margin-top: 10px; overflow:
    body.metropolitan-nagano-page .description-box { margin-top: 50px; }
    body.metropolitan-nagano-page .description-box li { font-size: 1em; }
 
-   body.kyoto-page .description-box { max-height: 57vh; margin-top: 10px; overflow: auto; }
+   
    body.kyoto-page .description-box li { font size: 1em; }   
    
    /* PEOPLE BOX ADJUSTMENTS */
