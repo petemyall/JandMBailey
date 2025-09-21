@@ -387,7 +387,7 @@ body.index-page .page-wrapper {
    HOTEL PAGE SPECIFIC
 -----------------------------------------------------*/
 body.metropolitan-nagano-page .description-box { margin-top: 50px; }
-body.kyoto-page .description-box { max-height: 57vh; margin-top: 10px; overflow: auto; }
+body.kyoto-page .description-box { max-height: 60vh; margin-top: 10px; overflow: auto; }
 
 /* ----------------------------------------------------
    RESPONSIVE TWEAKS
@@ -414,7 +414,7 @@ body.kyoto-page .description-box { max-height: 57vh; margin-top: 10px; overflow:
    body.metropolitan-nagano-page .description-box { margin-top: 50px; }
    body.metropolitan-nagano-page .description-box li { font-size: 1em; }
 
-   
+   body.kyoto-page .description-box { max-height: 57vh; margin-top: 10px; overflow: auto; }
    body.kyoto-page .description-box li { font size: 1em; }   
    
    /* PEOPLE BOX ADJUSTMENTS */
