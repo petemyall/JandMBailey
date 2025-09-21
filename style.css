@@ -357,7 +357,7 @@ body.journal-index .description-box { font-size: 0.9em; }
   background: rgba(255,255,255,0.2);
   z-index: -1;
 }
-body.metropolitan-nagano-page .description-box { margin-top: 50px; }
+
 
 /* ----------------------------------------------------
    FOOTER
@@ -384,6 +384,11 @@ body.index-page .page-wrapper {
 }
 
 /* ----------------------------------------------------
+   HOTEL PAGE SPECIFIC
+-----------------------------------------------------*/
+body.metropolitan-nagano-page .description-box { margin-top: 50px; }
+
+/* ----------------------------------------------------
    RESPONSIVE TWEAKS
 -----------------------------------------------------*/
 @media (max-width: 599px) {
@@ -401,14 +406,15 @@ body.index-page .page-wrapper {
   body.travel-page .description-box p strong { font-size: 0.85em; margin: -1px; padding: 0.5px; }
   body.travel-page .description-box h2 { font-size: 0.9em; margin: -1px; padding: 0.5px; }
    body.journal-page .description-box { max-height: 75vh; overflow-y: auto; }
-  body.keio-plaza-page .description-box {
-    max-height: 60vh;   /* or 30vh */
-    margin-top: 10px;
-    margin-bottom: 5px;
-    overflow: auto; }
+   /* ----------------------------------------------------
+   HOTEL PAGE SPECIFIC
+   -----------------------------------------------------*/
+  body.keio-plaza-page .description-box { max-height: 60vh; margin-top: 10px; overflow: auto; }
    body.metropolitan-nagano-page .description-box { margin-top: 50px; }
    body.metropolitan-nagano-page .description-box li { font-size: 1em; }
-      
+
+   body.kyoto-page .description-box { max-height: 60vh; margin-top: 10px; overflow: auto; }
+   body.kyoto-page .description-box li { font size: 1em; }   
    
    /* PEOPLE BOX ADJUSTMENTS */
   .people-box {
