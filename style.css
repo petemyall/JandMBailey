@@ -409,7 +409,7 @@ body.metropolitan-nagano-page .description-box { margin-top: 50px; }
    /* ----------------------------------------------------
    HOTEL PAGE SPECIFIC
    -----------------------------------------------------*/
-  body.keio-plaza-page .description-box { max-height: 60vh; margin-top: 10px; overflow: auto; }
+  body.keio-plaza-page .description-box { max-height: 57vh; margin-top: 10px; overflow: auto; }
    body.metropolitan-nagano-page .description-box { margin-top: 50px; }
    body.metropolitan-nagano-page .description-box li { font-size: 1em; }
 
