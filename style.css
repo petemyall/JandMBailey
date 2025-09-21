@@ -357,6 +357,7 @@ body.journal-index .description-box { font-size: 0.9em; }
   background: rgba(255,255,255,0.2);
   z-index: -1;
 }
+body.metropolitan-nagano-page .description-box { margin-top: 50px; }
 
 /* ----------------------------------------------------
    FOOTER
@@ -405,6 +406,7 @@ body.index-page .page-wrapper {
     margin-top: 10px;
     margin-bottom: 5px;
     overflow: auto; }
+   body.metropolitan-nagano-page .description-box { margin-top: 50px; }
    body.metropolitan-nagano-page .description-box li { font-size: 0.9em; }
       
    
