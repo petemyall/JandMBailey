@@ -144,13 +144,6 @@ body.index-page .subtitle {
 .description-box strong { color: #0077b6; font-size: 1.2em; }
 
 /* Daily Activities list — adjusted spacing/size */
-body.journal-page .description-box ul {
-  text-align: left;          /* override container */
-  list-style: disc outside;  /* explicit */
-  padding-left: 1.2em;       /* 2em may feel indented on mobiles */
-}
-body.jounal-page .description-box li { margin-bottom: 0.9em; }
-
 body.journal-page .description-box {
   background: rgba(247, 200, 208, 0.3);
   color: #b30000;
@@ -165,6 +158,13 @@ body.journal-page .description-box {
   text-align: center;
   display: block;
 }
+body.journal-page .description-box ul {
+  text-align: left;          /* override container */
+  list-style: disc outside;  /* explicit */
+  padding-left: 1.2em;       /* 2em may feel indented on mobiles */
+}
+body.journal-page .description-box li { margin-bottom: 0.9em; }
+
 body.keio-plaza .description-box li { font-size: 0.95em; }
 
 body.journal-index .description-box { font-size: 0.9em; }
