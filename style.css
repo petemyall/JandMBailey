@@ -56,6 +56,23 @@ body.journal-page .page-wrapper {
 /* ----------------------------------------------------
    PAGE-SPECIFIC BACKGROUNDS
 -----------------------------------------------------*/
+body.japan-page {
+  font-family: 'Noto Serif JP', serif;
+  background-image: url('images/japan-page-background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #3a3a3a;
+  text-align: center;
+}
+body.japan-page::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(255,255,255,0.3);
+  z-index: -1;
+}
+
 body.journal-index {
   background-image: url('images/journal-index-background.jpg');
   background-size: cover;
@@ -126,7 +143,54 @@ body.index-page .subtitle {
 /* ----------------------------------------------------
    CONTENT BOXES
 -----------------------------------------------------*/
-.description-box {
+/* Make the whole description box clickable */
+body.main-page .description-box {
+  position: relative;
+  width: clamp(150px, 27vw, 240px);   /* responsive width */
+  text-align: center;
+  margin: 10px;
+  padding: 6px 7px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  background: rgba(255,255,255,0.8);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.main-page .description-box:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.35);
+}
+
+
+
+/* Make the link cover the full box */
+body.main-page .description-box a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+}
+
+/* Style the image */
+body.main-page .description-box img {
+  width: calc(100% - 16px);
+  height: auto;
+  border-radius: 6px;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+body.main-page .description-box p { margin-bottom: 10px; }
+body.main-page .description-box strong { color: #0077b6; font-size: 1.2em; }
+
+body.japan-page .description-box {
   background: rgba(247, 200, 208, 0.6);
   color: #b30000;
   max-width: 800px;
@@ -140,8 +204,9 @@ body.index-page .subtitle {
   text-align: center;
   display: block;
 }
-.description-box p { margin-bottom: 10px; }
-.description-box strong { color: #0077b6; font-size: 1.2em; }
+body.japan-page .description-box p { margin-bottom: 10px; }
+body.japan-page .description-box strong { color: #0077b6; font-size: 1.2em; }
+
 
 /* Daily Activities list — adjusted spacing/size */
 body.journal-page .description-box {
@@ -354,6 +419,27 @@ body.journal-index .description-box { font-size: 0.9em; }
   position: absolute; top: 0; left: 0; width: 100%; height: 100%;
   background: rgba(255,255,255,0.2);
   z-index: -1;
+}
+/* Scale down the travel thumbnails */
+.link-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 40px auto;
+}
+
+.link-images img {
+  width: clamp(120px, 25vw, 240px);  /* scales between 120–240px depending on screen width */
+  height: auto;                      /* keep correct proportions */
+  border-radius: 12px;               /* optional – gives nice rounded corners */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.link-images img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.4);
 }
 
 
