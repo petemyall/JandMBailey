@@ -551,6 +551,17 @@ body.hiroshima-page .description-box li { margin-bottom: 0.25em; font-size: 0.95
   .journal-index .button-grid.full-width-mobile {
     grid-template-columns: 1fr;
   }
+
+/* Make link images ~75% smaller on mobiles */
+  .link-images { 
+    gap: 12px; 
+    margin: 20px auto; 
+  }
+  .link-images img {
+    /* original: clamp(120px, 25vw, 240px) */
+    width: clamp(30px, 6.25vw, 60px); /* 25% of original */
+  }
+
   .btn-card { font-size: 0.8em; padding: 4px 8px; }
   .btn-card strong { display: block; font-size: 1em; line-height: 1; }
   .btn-card small { display: block; margin-top: 2px; opacity: .8; }
