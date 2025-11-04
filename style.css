@@ -577,7 +577,7 @@ body.hiroshima-page .description-box li { margin-bottom: 0.25em; font-size: 0.95
   }
   .link-images img {
     /* original: clamp(120px, 25vw, 240px) */
-    width: clamp(30px, 6.25vw, 60px); /* 25% of original */
+    width: clamp(30px, 6.25vw, 60px); !important; /* 25% of original */
   }
 
 }
