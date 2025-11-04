@@ -1,20 +1,15 @@
 {
-  "name": "Japan 2025",
-  "short_name": "Japan",
-  "start_url": "index.html?homescreen",
+  "name": "J & M Bailey",
+  "short_name": "J&M Bailey",
+  "start_url": "/JandMBailey/index.html",
+  "scope": "/JandMBailey/",
   "display": "standalone",
-  "background_color": "#f0f8ff",
-  "theme_color": "#003366",
+  "background_color": "#0b1a24",
+  "theme_color": "#0b1a24",
   "icons": [
-    {
-      "src": "images/icon.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "images/icon-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/icon-192-maskable.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
   ]
 }
