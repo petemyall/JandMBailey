@@ -552,15 +552,6 @@ body.hiroshima-page .description-box li { margin-bottom: 0.25em; font-size: 0.95
     grid-template-columns: 1fr;
   }
 
-/* Make link images ~75% smaller on mobiles */
-  .link-images { 
-    gap: 12px; 
-    margin: 20px auto; 
-  }
-  .link-images img {
-    /* original: clamp(120px, 25vw, 240px) */
-    width: clamp(30px, 6.25vw, 60px); /* 25% of original */
-  }
 
   .btn-card { font-size: 0.8em; padding: 4px 8px; }
   .btn-card strong { display: block; font-size: 1em; line-height: 1; }
@@ -578,6 +569,17 @@ body.hiroshima-page .description-box li { margin-bottom: 0.25em; font-size: 0.95
   .album-banner .day-icons a { min-width: 1.5rem; height: 1.5rem; font-size: 0.75rem; }
    
   footer { font-size: 0.8em; }
+
+/* Make link images ~75% smaller on mobiles */
+  .link-images { 
+    gap: 12px; 
+    margin: 20px auto; 
+  }
+  .link-images img {
+    /* original: clamp(120px, 25vw, 240px) */
+    width: clamp(30px, 6.25vw, 60px); /* 25% of original */
+  }
+
 }
 
 
