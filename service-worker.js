@@ -6,8 +6,8 @@ const ASSETS = [
   './index.html',
   './style.css',
   './japan-2025.html',
-  './icons/icon-192.png',
-  './icons/icon-512.png'
+  './images/icon.png',
+  './images/icon-512.png'
 ];
 
 self.addEventListener('install', event => {
