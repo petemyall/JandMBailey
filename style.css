@@ -574,6 +574,27 @@ body.hiroshima-page .description-box li { margin-bottom: 0.25em; font-size: 0.95
    
   footer { font-size: 0.8em; }
 
+   /* --- MOBILE THUMB FIX: place at END of style.css --- */
+
+  /* Make each card smaller on phones */
+  body.main-page .link-images { gap: 10px; margin: 20px auto; }
+
+  /* Adjust the CARD width. Tweak numbers to taste.
+     If you really want ~75% smaller than desktop, go lower on the vw / max. */
+  body.main-page .description-box {
+    width: clamp(70px, 22vw, 120px);
+    padding: 4px;
+  }
+
+  /* Ensure image follows the card size, not the earlier rule */
+  body.main-page .description-box img {
+    width: 100% !important;
+  }
+
+  /* Optional: tighten caption text */
+  body.main-page .description-box a { font-size: 0.8rem; }
+
+
 
 }
 
