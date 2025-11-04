@@ -430,7 +430,6 @@ body.journal-index .description-box { font-size: 0.9em; }
 }
 
 .link-images img {
-  width: clamp(120px, 25vw, 240px);  /* scales between 120–240px depending on screen width */
   height: auto;                      /* keep correct proportions */
   border-radius: 12px;               /* optional – gives nice rounded corners */
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
