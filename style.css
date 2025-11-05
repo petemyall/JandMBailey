@@ -580,18 +580,22 @@ body.hiroshima-page .description-box li { margin-bottom: 0.25em; font-size: 0.95
 
   /* Adjust the CARD width. Tweak numbers to taste.
      If you really want ~75% smaller than desktop, go lower on the vw / max. */
-  body.main-page .description-box {
-    width: clamp(70px, 16vw, 90px);
-    padding: 4px;
-  }
+ body.main-page .description-box {
+  width: clamp(70px, 16vw, 90px);
+  padding: 4px;
+  box-sizing: border-box;
+}
 
-  /* Ensure image follows the card size, not the earlier rule */
-  body.main-page .description-box img {
-    width: 100% !important;
-  }
+body.main-page .description-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+}
 
-  /* Optional: tighten caption text */
-  body.main-page .description-box a { font-size: 0.8rem; }
+body.main-page .description-box a {
+  font-size: 0.75rem;
+}
 
 
 
