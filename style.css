@@ -1,427 +1,117 @@
-/* ----------------------------------------------------
-   FONTS & GLOBAL BASE
------------------------------------------------------*/
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&display=swap');
+/* =====================================================
+   GLOBAL PAGE LAYOUT AND BASE STYLES
+   ===================================================== */
+:root {
+  --text: #fff;
+  --background: #0b1a24;
+  --accent: #b89768;
+  --box-bg: rgba(20, 32, 40, 0.8);
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
 
-html, body {
-  height: 100%;
+/* Body base styling */
+body {
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
-}
-
-body {
-  font-family: 'Noto Serif JP', serif;
-  background-image: url('images/home-page-background.jpg');
+  color: var(--text);
+  background: var(--background);
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  color: #3a3a3a;
-  text-align: center;
-}
-body::before {
-  content: "";
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(255,255,255,0.3);
-  z-index: -1;
-}
-body {
-  /* …your existing properties… */
-  min-height: 100vh;   /* fallback */
-  min-height: 100dvh;  /* dynamic VH (some tablets) */
-  min-height: 100svh;  /* safe VH: fixes bottom clipping on tablets */
+  background-attachment: fixed;
+  font-family: Arial, Helvetica, sans-serif;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+  min-height: 100svh;
 }
 
-/* Main content wrapper */
+/* Shared page wrapper overlay (for dark tint if needed) */
 .page-wrapper {
-  flex: 1 0 auto;
-  display: flex;
-  flex-direction: column;
-   max-width: 900px;
-  margin: 0 auto;
-  padding: 0 10px;
-}
-
-/* Journal pages: keep content in a neat centered column  — NEW */
-body.journal-page .page-wrapper {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 10px;
-}
-
-/* ----------------------------------------------------
-   PAGE-SPECIFIC BACKGROUNDS
------------------------------------------------------*/
-body.japan-page {
-  font-family: 'Noto Serif JP', serif;
-  background-image: url('images/japan-page-background.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: #3a3a3a;
-  text-align: center;
-}
-body.japan-page::before {
-  content: "";
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(255,255,255,0.3);
-  z-index: -1;
-}
-
-body.journal-index {
-  background-image: url('images/journal-index-background.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-body.journal-index::before {
-  content: "";
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(255,255,255,0.6);
-  z-index: -1;
-}
-body.travel-page {
-  background-image: url('images/travel.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-body.journal-page {
-  background-image: url('images/journal-page-background.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-body.journal-page::before {
-  content: "";
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(255,255,255,0.1);
-  z-index: -1;
-}
-body.travel-page::before {
-  content: "";
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(255,255,255,0.6);
-  z-index: -1;
-}
-
-/* ----------------------------------------------------
-   HEADINGS
------------------------------------------------------*/
-h1, h2 {
-  font-family: 'Noto Serif JP', serif;
-  color: #b30000;
-  text-shadow: 1px 1px 2px #fff;
-}
-body.travel-page h2 { font-size: 1em; }
-
-body.index-page .main-heading {
-  text-align: center;
-  margin: 20px;
-  font-size: 2.4em;
-  font-weight: 900;
-  color: #ffffff;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.8), -1px -1px 0 rgba(0,0,0,0.6);
-}
-body.index-page .subtitle {
-  text-align: center;
-  font-size: 1.7em;
-  font-weight: 600;
-  color: #f2cccc;
-  text-shadow: 1.5px 1.5px 3px rgba(0,0,0,0.7);
-  margin-top: -10px;
-}
-
-/* ----------------------------------------------------
-   CONTENT BOXES
------------------------------------------------------*/
-/* Make the whole description box clickable */
-body.main-page .description-box {
   position: relative;
-  width: clamp(150px, 27vw, 240px);   /* responsive width */
+  z-index: 0;
+}
+
+.page-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+}
+
+/* Headings */
+h1, h2, h3 {
   text-align: center;
-  margin: 10px;
-  padding: 6px 7px;
+  color: var(--accent);
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+}
+
+/* =====================================================
+   MAIN PAGE (LINK IMAGES / HOME PAGE)
+   ===================================================== */
+body.main-page {
+  background-image: url('images/home-page-background.jpg');
+}
+
+/* Grid of link-image boxes */
+body.main-page .link-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin: 40px auto;
+}
+
+/* Description boxes (each card) */
+body.main-page .description-box {
+  background: var(--box-bg);
   border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
-  background: rgba(255,255,255,0.8);
+  box-shadow: var(--shadow);
+  width: clamp(150px, 27vw, 240px);
+  text-align: center;
+  padding: 8px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 body.main-page .description-box:hover {
-  transform: scale(1.03);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.35);
+  transform: translateY(-6px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
 }
 
-
-
-/* Make the link cover the full box */
+/* Link text inside boxes */
 body.main-page .description-box a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  display: block;
+  color: var(--accent);
+  font-weight: bold;
+  margin-top: 4px;
   text-decoration: none;
-  color: inherit;
-  height: 100%;
-  width: 100%;
-  padding: 0;
 }
 
-/* Style the image */
+body.main-page .description-box a:hover {
+  text-decoration: underline;
+}
+
+/* Image sizing (simplified for consistency) */
 body.main-page .description-box img {
-  width: calc(100% - 16px);
+  width: 100%;
   height: auto;
   border-radius: 6px;
-  margin: 0;
-  padding: 0;
   display: block;
+  margin: 0 auto;
 }
 
-body.main-page .description-box p { margin-bottom: 10px; }
-body.main-page .description-box strong { color: #0077b6; font-size: 1.2em; }
-
-body.japan-page .description-box {
-  background: rgba(247, 200, 208, 0.6);
-  color: #b30000;
-  max-width: 800px;
-  margin: 5px auto;
-  padding: 10px;
-  border-radius: 15px;
-  box-shadow: 4px 4px 15px rgba(0,0,0,0.2);
-  font-size: 1.3em;
-  font-weight: bold;
-  line-height: 1.2;
-  text-align: center;
-  display: block;
-}
-body.japan-page .description-box p { margin-bottom: 10px; }
-body.japan-page .description-box strong { color: #0077b6; font-size: 1.2em; }
-
-
-/* Daily Activities list — adjusted spacing/size */
-body.journal-page .description-box {
-  background: rgba(247, 200, 208, 0.3);
-  color: #b30000;
-  max-width: 800px;
-  margin: 5px auto;
-  padding: 2px;
-  border-radius: 15px;
-  box-shadow: 4px 4px 15px rgba(0,0,0,0.2);
-  font-size: 0.9em;
-  font-weight: bold;
-  line-height: 1.4;
-  text-align: center;
-  display: block;
-}
-body.journal-page .description-box ul {
-  text-align: left;          /* override container */
-  list-style: disc outside;  /* explicit */
-  padding-left: 1.2em;       /* 2em may feel indented on mobiles */
-}
-body.journal-page .description-box li { margin-bottom: 0.9em; }
-
-body.keio-plaza .description-box li { font-size: 0.95em; }
-
-body.journal-index .description-box { font-size: 0.9em; }
-   
-/* Narrative box (index) */
-.narrative-box {
-  background: rgba(247, 200, 208, 0.6);
-  color: #b30000;
-  max-width: 800px;
-  margin: 5px auto;
-  padding: 10px;
-  border-radius: 15px;
-  box-shadow: 4px 4px 15px rgba(0,0,0,0.2);
-  font-size: 0.75em;
-  line-height: 1.6;
-  text-align: center;
-  display: block;
-}
-.tagline { margin: 8px 0 0; font-style: italic; opacity: .8; }
-
-/* ----------------------------------------------------
-   HEADER ROW + HOTEL THUMB
------------------------------------------------------*/
-.header-row { display: flex; align-items: center; gap: 12px; margin-bottom: -5px; }
-
-.back-btn {
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: #fff;
-  background: linear-gradient(135deg, #42e695, #3bb2b8);
-  border-radius: 10px;
-  text-decoration: none;
-  box-shadow: 0 3px 10px rgba(0,0,0,.2);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.back-btn:hover { transform: scale(1.05); box-shadow: 0 5px 14px rgba(0,0,0,.25); }
-
-.hotel-header { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
-.hotel-title { flex: 1; }
-.hotel-title h1 { margin: 0; font-size: 1.6em; line-height: 1.2; }
-.hotel-title .stay-dates { margin: 0.3em 0 0; font-weight: bold; font-size: 1.1em; color: #444; } /* +15% */
-.hotel-thumb { flex: 0 0 150px; }
-.hotel-thumb img { width: 100%; height: auto; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0,0,0,0.2); }
-
-/* Optional small framed image block (if used elsewhere) */
-.hotel-frame {
-  max-width: 200px;
-  margin: 10px auto;
-  border: 3px solid #ccc;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
-  text-align: center;
-}
-.hotel-frame img { width: 100%; height: auto; display: block; }
-.hotel-frame figcaption { font-size: 0.75em; color: #444; padding: 4px; background: #f9f9f9; }
-
-/* ----------------------------------------------------
-   BUTTON GRID + ALBUM BANNER
------------------------------------------------------*/
-.button-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 12px;
-  margin: 18px 0 8px;
-}
-.btn-card {
-  display: block;
-  padding: 7px 11px;
-  border-radius: 14px;
-  text-decoration: none;
-  border: 1px solid rgba(0,0,0,.08);
-  box-shadow: 0 2px 10px rgba(0,0,0,.06);
-  background: rgba(255,255,255,.9);
-}
-.btn-card strong { display: block; font-size: 1.05rem; line-height: 1.25; }
-.btn-card small { display: block; margin-top: 4px; opacity: .8; }
-.section-title { margin-top: 22px; font-size: 1.15rem; }
-
-/* Force a single full-width column for the album banner — NEW */
-.button-grid.button-grid--full { grid-template-columns: 1fr; }
-
-/* Album banner layout */
-.album-banner {
-  background: rgba(94, 92, 93, 0.3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
+/* =====================================================
+   JOURNAL INDEX PAGE
+   ===================================================== */
+body.journal-index {
+  background-image: url('images/japan-map.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
-.album-banner .label {
-  margin-right: 10px;
-  font-weight: bold;
-  font-size: 1rem;
-}
-
-.album-banner .day-icons {
-  display: flex;
-  gap: 8px;
-}
-
-/* Make sure keycap emoji render */
-.album-banner .day-icons a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.4em 1.2em;   /* controls button size */
-  min-width: 4rem;        /* sets a wider minimum size */
-  height: auto;           /* let height adjust naturally */
-  border-radius: 8px;
-  font-size: 1.1rem;
-  text-decoration: none;
-  background: #f7c8d0;
-  border: 1px solid #ccc;
-  color: #b30000;
-  box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
-  transition: all 0.2s ease-in-out;
-}
-.album-banner .day-icons a:hover,
-.album-banner .day-icons a:focus {
-  background: #b30000;
-  color: #fff;
-  border-color: #b30000;
-  transform: translateY(-2px);
-  box-shadow: 2px 3px 6px rgba(0,0,0,0.2);
-}
-
-/* ----------------------------------------------------
-   INDEX PAGE: “Follow Our Journey” CTA — RESTORED
------------------------------------------------------*/
-.journey-link {
-  text-align: center;
-  margin: 5px 0;
-}
-.journey-btn {
-  display: inline-block;
-  padding: 0.2em 0.9em;
-  margin: 0;
-  font-size: 1.15rem;
-  font-weight: bold;
-  color: #fff;
-  background: linear-gradient(135deg, #ff6ec4, #7873f5);
-  border-radius: 12px;
-  text-decoration: none;
-  box-shadow: 0 4px 12px rgba(0,0,0,.2);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.journey-btn:hover,
-.journey-btn:focus {
-  transform: scale(1.05);
-  box-shadow: 0 6px 16px rgba(0,0,0,.25);
-}
-
-/* ----------------------------------------------------
-   PEOPLE BOX (index)
------------------------------------------------------*/
-.people-box {
-  background: rgba(247, 200, 208, 0.6);
-  border-radius: 15px;
-  box-shadow: 4px 4px 12px rgba(247,200,208,0.15);
-  color: #b30000;
-  font-weight: bold;
-  max-width: 900px;
-  margin: 5px auto;
-  padding: 5px;
-  text-align: center;
-}
-.people-box h2 { margin-top: 0; color: #b30000; font-size: 1.75em; text-shadow: 1px 1px 2px #fff; }
-.people-box h3 { margin: 12px 0 6px; font-size: 0.9em; color: #b30000; text-decoration: underline; }
-
-.guides-box { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 6px; margin: 5px 0 8px; }
-.guides-box div { background: rgba(255,255,255,0.8); color: #b30000; padding: 6px; font-size: 0.8em; border-radius: 10px; box-shadow: 2px 2px 6px rgba(0,0,0,0.1); }
-.guides-box h3 { font-size: 0.9em; margin: 6px 0 4px; }
-.guides-box p { font-size: 0.9em; margin: 2px 0; }
-
-.members-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 5px 10px; margin-top: 5px; }
-.members-grid p { margin: 4px 0; font-size: 0.9em; line-height: 1.4; }
-.members-box { background: rgba(255,255,255,0.8); color: #b30000; padding: 2px; border-radius: 10px; box-shadow: 2px 2px 6px rgba(0,0,0,0.1); }
-
-/* Softer page overlay above background photo */
-.page-wrapper { position: relative; z-index: 0; }
-.page-wrapper::before {
-  content: "";
-  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-  background: rgba(255,255,255,0.2);
-  z-index: -1;
-}
-/* Scale down the travel thumbnails */
-.link-images {
+body.journal-index .button-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -429,173 +119,93 @@ body.journal-index .description-box { font-size: 0.9em; }
   margin: 40px auto;
 }
 
-.link-images img {
-  height: auto;                      /* keep correct proportions */
-  border-radius: 12px;               /* optional – gives nice rounded corners */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+body.journal-index .button-grid a {
+  background: var(--box-bg);
+  color: var(--text);
+  padding: 12px 18px;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s ease;
 }
 
-.link-images img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.4);
+body.journal-index .button-grid a:hover {
+  transform: translateY(-5px);
 }
 
+/* =====================================================
+   MEMBERS GRID (USED ON VARIOUS PAGES)
+   ===================================================== */
+.members-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px; /* fixed invalid gap syntax */
+  justify-items: center;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 800px;
+}
 
-/* ----------------------------------------------------
+/* =====================================================
+   CITY / LOCATION SPECIFIC PAGES
+   ===================================================== */
+body.kyoto-page .description-box li { font-size: 1em; } /* fixed typo */
+
+/* =====================================================
    FOOTER
------------------------------------------------------*/
+   ===================================================== */
 footer {
-  background-color: rgba(179,0,0,0.6);
-  color: white;
-  padding: 5px;
-  font-size: 0.75em;
-  letter-spacing: 1px;
+  text-align: center;
+  color: var(--accent);
   margin-top: auto;
-  padding-bottom: calc(5px + env(safe-area-inset-bottom));
-}
-/* INDEX PAGE: make the wrapper control the footer placement (not <body>) */
-body.index-page {
-  display: block;          /* stop flexing the body on index */
-  min-height: auto;        /* let wrapper take over height */
+  padding: 10px 0;
+  font-size: 0.9rem;
 }
 
-body.index-page .page-wrapper {
-  min-height: 100svh;      /* safe viewport height on tablets/phones */
-  display: flex;
-  flex-direction: column;  /* stack header/content/footer */
-}
-
-/* ----------------------------------------------------
-   HOTEL PAGE SPECIFIC
------------------------------------------------------*/
-body.keio-plaza-page .description-box li { margin-bottom: 0.35em; font-size: 0.9em; }
-body.metropolitan-nagano-page .description-box { margin-top: 50px; }
-body.kyoto-page .description-box { max-height: 60vh; margin-top: 30px; overflow: auto; }
-body.kyoto-page .description-box li { margin-bottom: 0.4em; }
-body.nagasaki-page .description-box li { margin-bottom: 0.4em; }
-body.takamatsu-page .description-box li { margin-bottom: 0.4em; }
-body.hiroshima-page .description-box li { margin-bottom: 0.25em; font-size: 0.95em; }
-/* ----------------------------------------------------
-   RESPONSIVE TWEAKS
------------------------------------------------------*/
+/* =====================================================
+   MOBILE RESPONSIVE ADJUSTMENTS
+   ===================================================== */
 @media (max-width: 599px) {
-  body.index-page .main-heading { font-size: 1.5em; }
-  body.index-page .subtitle { font-size: 1.25em; margin-bottom: 5px; }
-  body.index-page .description-box { font-size: 0.82em; margin: 1px; padding: 2px; }
-  .narrative-box { margin-bottom: -25px; padding: 0 10px; }
-   body.journal-page .description-box { font-weight: normal; }
 
-  h1 { font-size: 1em; }
-  h2, h3 { font-size: 0.8em; }
-   body.main-page .description-box {
-  position: relative;
-  width: clamp(75px, 14vw, 120px);
-   }
-  
-  .members-box h3 { font-size: 0.9em; }
-  body.journal-index .description-box { margin: -5px; padding: 0.5px; }
-  body.travel-page .description-box p { font-size: 0.83em; margin: 1px; padding: 0.5px; }
-  body.travel-page .description-box p strong { font-size: 0.85em; margin: -1px; padding: 0.5px; }
-  body.travel-page .description-box h2 { font-size: 0.9em; margin: -1px; padding: 0.5px; }
-
-   /* ----------------------------------------------------
-   HOTEL PAGE SPECIFIC
-   -----------------------------------------------------*/
-  body.keio-plaza-page .description-box { max-height: 60vh; margin-top: 10px; overflow: auto; }
-   body.metropolitan-nagano-page .description-box { margin-top: 50px; }
-   body.metropolitan-nagano-page .description-box li { font-size: 1em; }
-   body.osaka-page .description-box li { font-size: 1.1em; }
-
-   body.kyoto-page .description-box { max-height: 57vh; margin-top: 10px; overflow: auto; }
-   body.kyoto-page .description-box li { font size: 1em; }   
-   
-   /* PEOPLE BOX ADJUSTMENTS */
-  .people-box {
-    margin-bottom: 1px;
-    line-height: 1;
-    padding: 6px;         /* a little more breathing room */
-    max-width: 100%;      /* allow it to expand fully */
-    width: 95%;           /* nearly full width, small inset */
-    margin-left: auto;    /* keep centered */
-    margin-right: auto;
-  }
-   .people-box h2 { font-size: 1em; }
-
-  /* Guides side by side */
-  .guides-box {
-    grid-template-columns: 1fr 1fr;   /* two columns on mobiles */
-    gap: 4px;
-  }
-  .guides-box div {
-    padding: 4px;                     /* slightly tighter padding */
-    font-size: 0.75em;                 /* smaller font for fit */
-  }
-  .guides-box h3 { margin: 3px 0 2px; }
-  .guides-box p { font-size: 0.9em; margin: 0.5px 0; }
-
-  .members-grid {
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 5px 5px 5px;
-  }
-  .members-grid p { font-size: 0.78em; }
-
-  .journey-btn {
-    padding: 0.3em 0.6em;
-    margin: 0;
-    font-size: 1rem;
-  }
-  .journey-link { margin: 2px 0; }
-
-  .journal-index .button-grid {
-    grid-template-columns: 1fr 1fr;   /* 2 equal columns */
-    gap: 8px;                         /* tighter gap */
-  }
-  .journal-index .button-grid.full-width-mobile {
-    grid-template-columns: 1fr;
+  /* Link image grid */
+  body.main-page .link-images {
+    gap: 10px;
+    margin: 20px auto;
   }
 
-
-  .btn-card { font-size: 0.8em; padding: 4px 8px; }
-  .btn-card strong { display: block; font-size: 1em; line-height: 1; }
-  .btn-card small { display: block; margin-top: 2px; opacity: .8; }
-
-  .back-btn { padding: 2px 4px; font-size: 0.8rem; }
-
-  /* journal page adjustments */
-  .hotel-title h1 { font-size: 1em; }
-  .description-box ul { font-size: 0.85em; line-height: 1; }
-  .hotel-thumb { flex: 0 0 75px; }
-  .hotel-title p { font-size: 0.75em }
-  .hotel-title .stay-dates { font-size: 0.75em }
-  
-  .album-banner .day-icons a { min-width: 1.5rem; height: 1.5rem; font-size: 0.75rem; }
-   
-  footer { font-size: 0.8em; }
-
-   /* --- MOBILE THUMB FIX: place at END of style.css --- */
-
-  /* Make each card smaller on phones */
-  body.main-page .link-images { gap: 10px; margin: 20px auto; }
-
-  /* Adjust the CARD width. Tweak numbers to taste.
-     If you really want ~75% smaller than desktop, go lower on the vw / max. */
+  /* Card size on phones */
   body.main-page .description-box {
-    width: clamp(70px, 16vw, 90px);
+    width: clamp(70px, 16vw, 100px);
     padding: 4px;
   }
 
-  /* Ensure image follows the card size, not the earlier rule */
+  /* Ensure image fills its box */
   body.main-page .description-box img {
     width: 100% !important;
+    height: auto;
   }
 
-  /* Optional: tighten caption text */
-  body.main-page .description-box a { font-size: 0.8rem; }
+  /* Smaller link captions */
+  body.main-page .description-box a {
+    font-size: 0.8rem;
+  }
 
+  /* Reduce button spacing in grids */
+  body.journal-index .button-grid {
+    gap: 10px;
+  }
 
+  .members-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+  }
 
+  footer {
+    font-size: 0.8rem;
+  }
 }
 
-
-/* -------------------- END --------------------------*/
+/* =====================================================
+   END OF STYLESHEET
+   ===================================================== */
