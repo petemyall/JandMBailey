@@ -36,6 +36,10 @@ body {
   flex-direction: column;
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 /* Main content wrapper */
 .page-wrapper {
   flex: 1 0 auto;
