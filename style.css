@@ -36,10 +36,6 @@ body {
   flex-direction: column;
 }
 
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
 /* Main content wrapper */
 .page-wrapper {
   flex: 1 0 auto;
@@ -424,26 +420,45 @@ body.journal-index .description-box { font-size: 0.9em; }
   background: rgba(255,255,255,0.2);
   z-index: -1;
 }
-/* Scale down the travel thumbnails */
-.link-images {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+/* --- GRID CONTAINER --- */
+.link-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 30px;
+  justify-items: center;
   margin: 40px auto;
+  width: min(90%, 800px);
 }
-
-.link-images img {
-  height: auto;                      /* keep correct proportions */
-  border-radius: 12px;               /* optional – gives nice rounded corners */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+/* --- CLICKABLE CARD --- */
+.card {
+  background: rgba(20, 32, 40, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  text-align: center;
+  color: #b89768;
+  font-weight: bold;
+  text-decoration: none;
+  overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.link-images img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.4);
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
 }
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px 8px 0 0;
+}
+
+.card p {
+  margin: 6px 0 10px;
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+}
+
 
 
 /* ----------------------------------------------------
@@ -492,10 +507,6 @@ body.hiroshima-page .description-box li { margin-bottom: 0.25em; font-size: 0.95
 
   h1 { font-size: 1em; }
   h2, h3 { font-size: 0.8em; }
-   body.main-page .description-box {
-  position: relative;
-  width: clamp(75px, 14vw, 120px);
-   }
   
   .members-box h3 { font-size: 0.9em; }
   body.journal-index .description-box { margin: -5px; padding: 0.5px; }
@@ -574,33 +585,15 @@ body.hiroshima-page .description-box li { margin-bottom: 0.25em; font-size: 0.95
   .hotel-title .stay-dates { font-size: 0.75em }
   
   .album-banner .day-icons a { min-width: 1.5rem; height: 1.5rem; font-size: 0.75rem; }
+
+.link-grid {
+    gap: 10px;
+  }
+  .card {
+    font-size: 0.85rem;
+  }
    
   footer { font-size: 0.8em; }
-
-   /* --- MOBILE THUMB FIX: place at END of style.css --- */
-
-  /* Make each card smaller on phones */
-  body.main-page .link-images { gap: 10px; margin: 20px auto; }
-
-  /* Adjust the CARD width. Tweak numbers to taste.
-     If you really want ~75% smaller than desktop, go lower on the vw / max. */
- body.main-page .description-box {
-  width: clamp(70px, 16vw, 90px);
-  padding: 4px;
-  box-sizing: border-box;
-}
-
-body.main-page .description-box img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 6px;
-}
-
-body.main-page .description-box a {
-  font-size: 0.75rem;
-}
-
 
 
 }
