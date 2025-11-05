@@ -585,10 +585,7 @@ body.hiroshima-page .description-box li { margin-bottom: 0.25em; font-size: 0.95
     padding: 4px;
   }
 
-  /* Ensure image follows the card size, not the earlier rule */
-  body.main-page .description-box img {
-    width: 100% !important;
-  }
+ 
 
   /* Optional: tighten caption text */
   body.main-page .description-box a { font-size: 0.8rem; }
