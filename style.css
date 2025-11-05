@@ -587,7 +587,8 @@ body.hiroshima-page .description-box li { margin-bottom: 0.25em; font-size: 0.95
   .album-banner .day-icons a { min-width: 1.5rem; height: 1.5rem; font-size: 0.75rem; }
 
 .link-grid {
-    gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  gap: 10px;
   }
   .card {
     font-size: 0.85rem;
