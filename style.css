@@ -581,7 +581,7 @@ body.hiroshima-page .description-box li { margin-bottom: 0.25em; font-size: 0.95
   /* Adjust the CARD width. Tweak numbers to taste.
      If you really want ~75% smaller than desktop, go lower on the vw / max. */
   body.main-page .description-box {
-    width: clamp(70px, 22vw, 120px);
+    width: clamp(70px, 16vw, 90px);
     padding: 4px;
   }
 
