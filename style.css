@@ -501,7 +501,7 @@ body.hiroshima-page .description-box li { margin-bottom: 0.25em; font-size: 0.95
 @media (max-width: 599px) {
   body.main-page .main-heading { font-size: 1.5em; }
   body.main-page .subtitle { font-size: 1.25em; margin-bottom: 5px; }
-  body.index-page .description-box { font-size: 0.82em; margin: 1px; padding: 2px; }
+  body.main-page .description-box { font-size: 0.82em; margin: 1px; padding: 2px; }
   .narrative-box { margin-bottom: -25px; padding: 0 10px; }
    body.journal-page .description-box { font-weight: normal; }
 
