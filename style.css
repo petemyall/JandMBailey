@@ -474,12 +474,12 @@ footer {
   padding-bottom: calc(5px + env(safe-area-inset-bottom));
 }
 /* INDEX PAGE: make the wrapper control the footer placement (not <body>) */
-body.index-page {
+body.main-page {
   display: block;          /* stop flexing the body on index */
   min-height: auto;        /* let wrapper take over height */
 }
 
-body.index-page .page-wrapper {
+body.main-page .page-wrapper {
   min-height: 100svh;      /* safe viewport height on tablets/phones */
   display: flex;
   flex-direction: column;  /* stack header/content/footer */
@@ -499,8 +499,8 @@ body.hiroshima-page .description-box li { margin-bottom: 0.25em; font-size: 0.95
    RESPONSIVE TWEAKS
 -----------------------------------------------------*/
 @media (max-width: 599px) {
-  body.index-page .main-heading { font-size: 1.5em; }
-  body.index-page .subtitle { font-size: 1.25em; margin-bottom: 5px; }
+  body.main-page .main-heading { font-size: 1.5em; }
+  body.main-page .subtitle { font-size: 1.25em; margin-bottom: 5px; }
   body.index-page .description-box { font-size: 0.82em; margin: 1px; padding: 2px; }
   .narrative-box { margin-bottom: -25px; padding: 0 10px; }
    body.journal-page .description-box { font-weight: normal; }
