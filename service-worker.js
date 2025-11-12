@@ -2,12 +2,13 @@
 // Cache-first for app shell; network fallback for everything else
 const CACHE_NAME = 'jandmbailey-pwa-v1';
 const ASSETS = [
-  './',
-  './index.html',
-  './style.css',
-  './japan-2025.html',
-  './images/icon.png',
-  './images/icon-512x512.png'
+  "/JandMBailey/",
+  "/JandMBailey/index.html",
+  "/JandMBailey/assets/style.css",
+  "/JandMBailey/assets/icons/icon-192.png",
+  "/JandMBailey/assets/icons/icon-512.png",
+  "/JandMBailey/assets/icons/icon-192-maskable.png",
+  "/JandMBailey/assets/icons/icon-512-maskable.png"
 ];
 
 self.addEventListener('install', event => {
@@ -44,7 +45,7 @@ self.addEventListener('fetch', event => {
           }
         } catch (e) {}
         return res;
-      }).catch(() => caches.match('./index.html'));
+      }).catch(() => caches.match("/JandMBailey/index.html"));
     })
   );
 });

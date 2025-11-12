@@ -1,0 +1,22 @@
+{
+  "name": "J & M Bailey",
+  "short_name": "J&M Bailey",
+  "id": "/JandMBailey/",
+  "start_url": "/JandMBailey/",
+  "scope": "/JandMBailey/",
+  "display": "standalone",
+  "background_color": "#0b1a24",
+  "theme_color": "#0b1a24",
+  "icons": [
+    {
+      "src": "/JandMBailey/assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/JandMBailey/assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
