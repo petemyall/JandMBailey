@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Photos Not Loaded</title>
+  <style>
+    html, body { height: 100%; margin: 0; background: #e9dcc3; } /* page colour behind image */
+    img.fullscreen {
+      position: fixed; inset: 0;
+      width: 100vw; height: 100vh;
+      object-fit: contain;      /* change to 'cover' if you prefer it to fill and crop */
+      object-position: center;  /* keep it centred */
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <!-- Put your generated image in /images/ and update the filename below -->
+  <img class="fullscreen" src="../images/photos-not-loaded.jpg"
+       alt="Sorry, I haven't loaded the photos for this day">
+</body>
+</html>
