@@ -1,5 +1,5 @@
 /* ----------------------------------------------------
-   FONTS & GLOBAL BASE
+   1. FONTS & GLOBAL BASE
 -----------------------------------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&display=swap');
 
@@ -10,23 +10,6 @@ html, body {
   display: flex;
   flex-direction: column;
 }
-body {
-  font-family: 'Noto Serif JP', serif;
-  background-image: url('images/home-page-background.jpg') !important;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: #3a3a3a;
-  text-align: center;
-}
-body {
-  /* …your existing properties… */
-  min-height: 100vh;   /* fallback */
-  min-height: 100dvh;  /* dynamic VH (some tablets) */
-  min-height: 100svh;  /* safe VH: fixes bottom clipping on tablets */
-  display: flex;
-  flex-direction: column;
-}
 
 body {
   font-family: 'Noto Serif JP', serif;
@@ -34,94 +17,58 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  color: #3a3a3a;
   text-align: center;
-}
 
+  /* Viewport height handling */
+  min-height: 100vh;   /* fallback */
+  min-height: 100dvh;  /* dynamic VH (some tablets) */
+  min-height: 100svh;  /* safe VH: fixes bottom clipping on tablets */
+
+  display: flex;
+  flex-direction: column;
+}
 
 body::before {
   content: "";
   position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0;
   background: rgba(255,255,255,0.3);
   z-index: -1;
 }
-
 
 /* Main content wrapper */
 .page-wrapper {
   flex: 1 0 auto;
   display: flex;
   flex-direction: column;
-   max-width: 900px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 0 10px;
 }
 
-/* Journal pages: keep content in a neat centered column  — NEW */
+/* Journal pages: keep content in a neat centered column */
 body.journal-page .page-wrapper {
   max-width: 900px;
   margin: 0 auto;
   padding: 0 10px;
 }
 
-/* ----------------------------------------------------
-   JAPAN-SPECIFIC BACKGROUNDS
------------------------------------------------------*/
-
-body.japan-page {
-  background-image: url('images/japan-backgrounds/page-background.jpg') !important; }
-
-body.japan-journal {
-  background-image: url('images/japan-backgrounds/journal-page-background.jpg') !important; }
-
-body.japan-index {
-  background-image: url('images/japan-backgrounds/index-background.jpg') !important; }
-
-/* ----------------------------------------------------
-   VIETNAM-SPECIFIC BACKGROUNDS
------------------------------------------------------*/
-body.vietnam-page {
-  background-image: url('images/vietnam-backgrounds/page-background.jpg') ! important; }
-
-body.vietnam-journal {
-  background-image: url('images/vietnam-backgrounds/journal-page-background.jpg') !important; }
-
-body.vietnam-index {
-  background-image: url('images/vietnam-backgrounds/index-background.jpg') !important; }
-
-body.travel-page {
-  background-image: url('images/travel.jpg'); }
-
-/* ----------------------------------------------------
-   HEADINGS
------------------------------------------------------*/
+/* Headings */
 h1, h2 {
   font-family: 'Noto Serif JP', serif;
   color: #b30000;
   text-shadow: 1px 1px 2px #fff;
 }
-body.travel-page h2 { font-size: 1em; }
-
-body.index-page .main-heading {
-  text-align: center;
-  margin: 20px;
-  font-size: 2.4em;
-  font-weight: 900;
-  color: #ffffff;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.8), -1px -1px 0 rgba(0,0,0,0.6);
-}
-body.index-page .subtitle {
-  text-align: center;
-  font-size: 1.7em;
-  font-weight: 600;
-  color: #f2cccc;
-  text-shadow: 1.5px 1.5px 3px rgba(0,0,0,0.7);
-  margin-top: -10px;
-}
 
 /* ----------------------------------------------------
-   CONTENT BOXES
+   2. GLOBAL COMPONENTS
 -----------------------------------------------------*/
+
+/* 2.1 CONTENT BOXES (MAIN PAGE GRID) */
 /* Make the whole description box clickable */
 body.main-page .description-box {
   position: relative;
@@ -140,8 +87,6 @@ body.main-page .description-box:hover {
   transform: scale(1.03);
   box-shadow: 0 6px 14px rgba(0,0,0,0.35);
 }
-
-
 
 /* Make the link cover the full box */
 body.main-page .description-box a {
@@ -169,25 +114,7 @@ body.main-page .description-box img {
 body.main-page .description-box p { margin-bottom: 10px; }
 body.main-page .description-box strong { color: #0077b6; font-size: 1.2em; }
 
-body.japan-page .description-box {
-  background: rgba(247, 200, 208, 0.6);
-  color: #b30000;
-  max-width: 800px;
-  margin: 5px auto;
-  padding: 10px;
-  border-radius: 15px;
-  box-shadow: 4px 4px 15px rgba(0,0,0,0.2);
-  font-size: 1.3em;
-  font-weight: bold;
-  line-height: 1.2;
-  text-align: center;
-  display: block;
-}
-body.japan-page .description-box p { margin-bottom: 10px; }
-body.japan-page .description-box strong { color: #0077b6; font-size: 1.2em; }
-
-
-/* Daily Activities list — adjusted spacing/size */
+/* 2.2 JOURNAL / VIETNAM JOURNAL DESCRIPTION BOXES */
 body.journal-page .description-box,
 body.viet-journal-page .description-box {
   background: rgba(247, 200, 208, 0.3);
@@ -203,22 +130,26 @@ body.viet-journal-page .description-box {
   text-align: center;
   display: block;
 }
+
 body.journal-page .description-box ul,
 body.viet-journal-page .description-box ul {
   text-align: left;          /* override container */
   list-style: disc outside;  /* explicit */
   padding-left: 1.2em;       /* 2em may feel indented on mobiles */
 }
+
 body.journal-page .description-box li,
 body.viet-journal-page .description-box li { 
-   margin-bottom: 0.9em; 
+  margin-bottom: 0.9em; 
 }
 
+/* Keio generic tweak */
 body.keio-plaza .description-box li { font-size: 0.95em; }
 
+/* Journal index generic size */
 body.journal-index .description-box { font-size: 0.9em; }
-   
-/* Narrative box (index) */
+
+/* 2.3 NARRATIVE BOX (INDEX) */
 .narrative-box {
   background: rgba(247, 200, 208, 0.6);
   color: #b30000;
@@ -234,11 +165,15 @@ body.journal-index .description-box { font-size: 0.9em; }
 }
 .tagline { margin: 8px 0 0; font-style: italic; opacity: .8; }
 
-/* ----------------------------------------------------
-   HEADER ROW + HOTEL THUMB
------------------------------------------------------*/
-.header-row { display: flex; align-items: center; gap: 12px; margin-bottom: -5px; }
+/* 2.4 HEADER ROW + HOTEL THUMB */
+.header-row { 
+  display: flex; 
+  align-items: center; 
+  gap: 12px; 
+  margin-bottom: -5px; 
+}
 
+/* Back button */
 .back-btn {
   display: inline-block;
   padding: 10px 20px;
@@ -251,16 +186,40 @@ body.journal-index .description-box { font-size: 0.9em; }
   box-shadow: 0 3px 10px rgba(0,0,0,.2);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-.back-btn:hover { transform: scale(1.05); box-shadow: 0 5px 14px rgba(0,0,0,.25); }
+.back-btn:hover { 
+  transform: scale(1.05); 
+  box-shadow: 0 5px 14px rgba(0,0,0,.25); 
+}
 
-.hotel-header { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+/* Hotel header layout */
+.hotel-header { 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  gap: 1rem; 
+  flex-wrap: wrap; 
+}
 .hotel-title { flex: 1; }
-.hotel-title h1 { margin: 0; font-size: 1.6em; line-height: 1.2; }
-.hotel-title .stay-dates { margin: 0.3em 0 0; font-weight: bold; font-size: 1.1em; color: #444; } /* +15% */
+.hotel-title h1 { 
+  margin: 0; 
+  font-size: 1.6em; 
+  line-height: 1.2; 
+}
+.hotel-title .stay-dates { 
+  margin: 0.3em 0 0; 
+  font-weight: bold; 
+  font-size: 1.1em; 
+  color: #444; 
+}
 .hotel-thumb { flex: 0 0 150px; }
-.hotel-thumb img { width: 100%; height: auto; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0,0,0,0.2); }
+.hotel-thumb img { 
+  width: 100%; 
+  height: auto; 
+  border-radius: 10px; 
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.2); 
+}
 
-/* Optional small framed image block (if used elsewhere) */
+/* Optional small framed image block */
 .hotel-frame {
   max-width: 200px;
   margin: 10px auto;
@@ -271,17 +230,21 @@ body.journal-index .description-box { font-size: 0.9em; }
   text-align: center;
 }
 .hotel-frame img { width: 100%; height: auto; display: block; }
-.hotel-frame figcaption { font-size: 0.75em; color: #444; padding: 4px; background: #f9f9f9; }
+.hotel-frame figcaption { 
+  font-size: 0.75em; 
+  color: #444; 
+  padding: 4px; 
+  background: #f9f9f9; 
+}
 
-/* ----------------------------------------------------
-   BUTTON GRID + ALBUM BANNER
------------------------------------------------------*/
+/* 2.5 BUTTON GRID + ALBUM BANNER */
 .button-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 12px;
   margin: 18px 0 8px;
 }
+
 .btn-card {
   display: block;
   padding: 7px 11px;
@@ -291,11 +254,22 @@ body.journal-index .description-box { font-size: 0.9em; }
   box-shadow: 0 2px 10px rgba(0,0,0,.06);
   background: rgba(255,255,255,.9);
 }
-.btn-card strong { display: block; font-size: 1.05rem; line-height: 1.25; }
-.btn-card small { display: block; margin-top: 4px; opacity: .8; }
-.section-title { margin-top: 22px; font-size: 1.15rem; }
+.btn-card strong { 
+  display: block; 
+  font-size: 1.05rem; 
+  line-height: 1.25; 
+}
+.btn-card small { 
+  display: block; 
+  margin-top: 4px; 
+  opacity: .8; 
+}
+.section-title { 
+  margin-top: 22px; 
+  font-size: 1.15rem; 
+}
 
-/* Force a single full-width column for the album banner — NEW */
+/* Force a single full-width column for the album banner */
 .button-grid.button-grid--full { grid-template-columns: 1fr; }
 
 /* Album banner layout */
@@ -344,9 +318,7 @@ body.journal-index .description-box { font-size: 0.9em; }
   box-shadow: 2px 3px 6px rgba(0,0,0,0.2);
 }
 
-/* ----------------------------------------------------
-   INDEX PAGE: “Follow Our Journey” CTA — RESTORED
------------------------------------------------------*/
+/* 2.6 INDEX PAGE: “Follow Our Journey” CTA */
 .journey-link {
   text-align: center;
   margin: 5px 0;
@@ -370,9 +342,7 @@ body.journal-index .description-box { font-size: 0.9em; }
   box-shadow: 0 6px 16px rgba(0,0,0,.25);
 }
 
-/* ----------------------------------------------------
-   PEOPLE BOX (index)
------------------------------------------------------*/
+/* 2.7 PEOPLE / GUIDES / MEMBERS BOXES */
 .people-box {
   background: rgba(247, 200, 208, 0.6);
   border-radius: 15px;
@@ -384,19 +354,62 @@ body.journal-index .description-box { font-size: 0.9em; }
   padding: 5px;
   text-align: center;
 }
-.people-box h2 { margin-top: 0; color: #b30000; font-size: 1.75em; text-shadow: 1px 1px 2px #fff; }
-.people-box h3 { margin: 12px 0 6px; font-size: 0.9em; color: #b30000; text-decoration: underline; }
+.people-box h2 { 
+  margin-top: 0; 
+  color: #b30000; 
+  font-size: 1.75em; 
+  text-shadow: 1px 1px 2px #fff; 
+}
+.people-box h3 { 
+  margin: 12px 0 6px; 
+  font-size: 0.9em; 
+  color: #b30000; 
+  text-decoration: underline; 
+}
 
-.guides-box { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 6px; margin: 5px 0 8px; }
-.guides-box div { background: rgba(255,255,255,0.8); color: #b30000; padding: 6px; font-size: 0.8em; border-radius: 10px; box-shadow: 2px 2px 6px rgba(0,0,0,0.1); }
-.guides-box h3 { font-size: 0.9em; margin: 6px 0 4px; }
-.guides-box p { font-size: 0.9em; margin: 2px 0; }
+.guides-box { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+  gap: 6px; 
+  margin: 5px 0 8px; 
+}
+.guides-box div { 
+  background: rgba(255,255,255,0.8); 
+  color: #b30000; 
+  padding: 6px; 
+  font-size: 0.8em; 
+  border-radius: 10px; 
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.1); 
+}
+.guides-box h3 { 
+  font-size: 0.9em; 
+  margin: 6px 0 4px; 
+}
+.guides-box p { 
+  font-size: 0.9em; 
+  margin: 2px 0; 
+}
 
-.members-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 5px 10px; margin-top: 5px; }
-.members-grid p { margin: 4px 0; font-size: 0.9em; line-height: 1.4; }
-.members-box { background: rgba(255,255,255,0.8); color: #b30000; padding: 2px; border-radius: 10px; box-shadow: 2px 2px 6px rgba(0,0,0,0.1); }
+.members-grid { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); 
+  gap: 5px 10px; 
+  margin-top: 5px; 
+}
+.members-grid p { 
+  margin: 4px 0; 
+  font-size: 0.9em; 
+  line-height: 1.4; 
+}
+.members-box { 
+  background: rgba(255,255,255,0.8); 
+  color: #b30000; 
+  padding: 2px; 
+  border-radius: 10px; 
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.1); 
+}
 
-/* --- GRID CONTAINER --- */
+/* 2.8 LINK GRID + CARDS */
 .link-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -405,7 +418,8 @@ body.journal-index .description-box { font-size: 0.9em; }
   margin: 40px auto;
   width: min(90%, 800px);
 }
-/* --- CLICKABLE CARD --- */
+
+/* Clickable card */
 .card {
   background: rgba(20, 32, 40, 0.8);
   border-radius: 10px;
@@ -417,29 +431,22 @@ body.journal-index .description-box { font-size: 0.9em; }
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .card:hover {
   transform: translateY(-6px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.6);
 }
-
 .card img {
   width: 100%;
   height: auto;
   display: block;
   border-radius: 8px 8px 0 0;
 }
-
 .card p {
   margin: 6px 0 10px;
   font-size: clamp(0.8rem, 1.5vw, 1rem);
 }
 
-
-
-/* ----------------------------------------------------
-   FOOTER
------------------------------------------------------*/
+/* 2.9 FOOTER + INDEX WRAPPER BEHAVIOUR */
 footer {
   background-color: rgba(179,0,0,0.6);
   color: white;
@@ -449,6 +456,7 @@ footer {
   margin-top: auto;
   padding-bottom: calc(5px + env(safe-area-inset-bottom));
 }
+
 /* INDEX PAGE: make the wrapper control the footer placement (not <body>) */
 body.index-page {
   display: block;          /* stop flexing the body on index */
@@ -462,46 +470,188 @@ body.index-page .page-wrapper {
 }
 
 /* ----------------------------------------------------
-   HOTEL PAGE SPECIFIC
+   3. PAGE-SPECIFIC STYLES
 -----------------------------------------------------*/
-body.keio-plaza-page .description-box li { margin-bottom: 0.35em; font-size: 0.9em; }
-body.metropolitan-nagano-page .description-box { margin-top: 50px; }
-body.kyoto-page .description-box { max-height: 60vh; margin-top: 30px; overflow: auto; }
-body.kyoto-page .description-box li { margin-bottom: 0.4em; }
-body.nagasaki-page .description-box li { margin-bottom: 0.4em; }
-body.takamatsu-page .description-box li { margin-bottom: 0.4em; }
-body.hiroshima-page .description-box li { margin-bottom: 0.25em; font-size: 0.95em; }
+
+/* 3.1 JAPAN-SPECIFIC BACKGROUNDS */
+body.japan-page {
+  background-image: url('images/japan-backgrounds/page-background.jpg') !important;
+}
+
+body.japan-journal {
+  background-image: url('images/japan-backgrounds/journal-page-background.jpg') !important;
+}
+
+body.japan-index {
+  background-image: url('images/japan-backgrounds/index-background.jpg') !important;
+}
+
+/* 3.2 VIETNAM-SPECIFIC BACKGROUNDS */
+body.vietnam-page {
+  background-image: url('images/vietnam-backgrounds/page-background.jpg') !important;
+}
+
+body.vietnam-journal {
+  background-image: url('images/vietnam-backgrounds/journal-page-background.jpg') !important;
+}
+
+body.vietnam-index {
+  background-image: url('images/vietnam-backgrounds/index-background.jpg') !important;
+}
+
+/* 3.3 TRAVEL PAGE BACKGROUND */
+body.travel-page {
+  background-image: url('images/travel.jpg');
+}
+
+/* Travel page heading tweak */
+body.travel-page h2 { font-size: 1em; }
+
+/* 3.4 INDEX PAGE HEADINGS */
+body.index-page .main-heading {
+  text-align: center;
+  margin: 20px;
+  font-size: 2.4em;
+  font-weight: 900;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8), -1px -1px 0 rgba(0,0,0,0.6);
+}
+
+body.index-page .subtitle {
+  text-align: center;
+  font-size: 1.7em;
+  font-weight: 600;
+  color: #f2cccc;
+  text-shadow: 1.5px 1.5px 3px rgba(0,0,0,0.7);
+  margin-top: -10px;
+}
+
+/* 3.5 JAPAN PAGE DESCRIPTION BOX */
+body.japan-page .description-box {
+  background: rgba(247, 200, 208, 0.6);
+  color: #b30000;
+  max-width: 800px;
+  margin: 5px auto;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 4px 4px 15px rgba(0,0,0,0.2);
+  font-size: 1.3em;
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: center;
+  display: block;
+}
+body.japan-page .description-box p { margin-bottom: 10px; }
+body.japan-page .description-box strong { color: #0077b6; font-size: 1.2em; }
+
+/* 3.6 JOURNAL INDEX */
+body.journal-index .description-box { font-size: 0.9em; }
+
+/* 3.7 HOTEL PAGE-SPECIFIC TWEAKS (DESKTOP/BASE) */
+body.keio-plaza-page .description-box li { 
+  margin-bottom: 0.35em; 
+  font-size: 0.9em; 
+}
+body.metropolitan-nagano-page .description-box { 
+  margin-top: 50px; 
+}
+body.kyoto-page .description-box { 
+  max-height: 60vh; 
+  margin-top: 30px; 
+  overflow: auto; 
+}
+body.kyoto-page .description-box li { 
+  margin-bottom: 0.4em; 
+}
+body.nagasaki-page .description-box li { 
+  margin-bottom: 0.4em; 
+}
+body.takamatsu-page .description-box li { 
+  margin-bottom: 0.4em; 
+}
+body.hiroshima-page .description-box li { 
+  margin-bottom: 0.25em; 
+  font-size: 0.95em; 
+}
+
 /* ----------------------------------------------------
-   RESPONSIVE TWEAKS
+   4. RESPONSIVE TWEAKS
 -----------------------------------------------------*/
 @media (max-width: 599px) {
-  body.index-page .main-heading { font-size: 1.5em; }
-  body.index-page .subtitle { font-size: 1.25em; margin-bottom: 5px; }
-  body.index-page .description-box { font-size: 0.82em; margin: 1px; padding: 2px; }
-  .narrative-box { margin-bottom: -25px; padding: 0 10px; }
-   body.journal-page .description-box { font-weight: normal; }
+
+  /* 4.1 GENERAL TEXT + INDEX ADJUSTMENTS */
+  body.index-page .main-heading { 
+    font-size: 1.5em; 
+  }
+  body.index-page .subtitle { 
+    font-size: 1.25em; 
+    margin-bottom: 5px; 
+  }
+  body.index-page .description-box { 
+    font-size: 0.82em; 
+    margin: 1px; 
+    padding: 2px; 
+  }
+  .narrative-box { 
+    margin-bottom: -25px; 
+    padding: 0 10px; 
+  }
+
+  body.journal-page .description-box { 
+    font-weight: normal; 
+  }
 
   h1 { font-size: 1em; }
   h2, h3 { font-size: 0.8em; }
-  
+
   .members-box h3 { font-size: 0.9em; }
-  body.journal-index .description-box { margin: -5px; padding: 0.5px; }
-  body.travel-page .description-box p { font-size: 0.83em; margin: 1px; padding: 0.5px; }
-  body.travel-page .description-box p strong { font-size: 0.85em; margin: -1px; padding: 0.5px; }
-  body.travel-page .description-box h2 { font-size: 0.9em; margin: -1px; padding: 0.5px; }
+  body.journal-index .description-box { 
+    margin: -5px; 
+    padding: 0.5px; 
+  }
 
-   /* ----------------------------------------------------
-   HOTEL PAGE SPECIFIC
-   -----------------------------------------------------*/
-  body.keio-plaza-page .description-box { max-height: 60vh; margin-top: 10px; overflow: auto; }
-   body.metropolitan-nagano-page .description-box { margin-top: 50px; }
-   body.metropolitan-nagano-page .description-box li { font-size: 1em; }
-   body.osaka-page .description-box li { font-size: 1.1em; }
+  body.travel-page .description-box p { 
+    font-size: 0.83em; 
+    margin: 1px; 
+    padding: 0.5px; 
+  }
+  body.travel-page .description-box p strong { 
+    font-size: 0.85em; 
+    margin: -1px; 
+    padding: 0.5px; 
+  }
+  body.travel-page .description-box h2 { 
+    font-size: 0.9em; 
+    margin: -1px; 
+    padding: 0.5px; 
+  }
 
-   body.kyoto-page .description-box { max-height: 57vh; margin-top: 10px; overflow: auto; }
-   body.kyoto-page .description-box li { font size: 1em; }   
-   
-   /* PEOPLE BOX ADJUSTMENTS */
+  /* 4.2 HOTEL PAGE SPECIFIC (MOBILE) */
+  body.keio-plaza-page .description-box { 
+    max-height: 60vh; 
+    margin-top: 10px; 
+    overflow: auto; 
+  }
+  body.metropolitan-nagano-page .description-box { 
+    margin-top: 50px; 
+  }
+  body.metropolitan-nagano-page .description-box li { 
+    font-size: 1em; 
+  }
+  body.osaka-page .description-box li { 
+    font-size: 1.1em; 
+  }
+
+  body.kyoto-page .description-box { 
+    max-height: 57vh; 
+    margin-top: 10px; 
+    overflow: auto; 
+  }
+  body.kyoto-page .description-box li { 
+    font-size: 1em; 
+  }   
+
+  /* 4.3 PEOPLE BOX ADJUSTMENTS */
   .people-box {
     margin-bottom: 1px;
     line-height: 1;
@@ -511,7 +661,9 @@ body.hiroshima-page .description-box li { margin-bottom: 0.25em; font-size: 0.95
     margin-left: auto;    /* keep centered */
     margin-right: auto;
   }
-   .people-box h2 { font-size: 1em; }
+  .people-box h2 { 
+    font-size: 1em; 
+  }
 
   /* Guides side by side */
   .guides-box {
@@ -520,23 +672,33 @@ body.hiroshima-page .description-box li { margin-bottom: 0.25em; font-size: 0.95
   }
   .guides-box div {
     padding: 4px;                     /* slightly tighter padding */
-    font-size: 0.75em;                 /* smaller font for fit */
+    font-size: 0.75em;                /* smaller font for fit */
   }
-  .guides-box h3 { margin: 3px 0 2px; }
-  .guides-box p { font-size: 0.9em; margin: 0.5px 0; }
+  .guides-box h3 { 
+    margin: 3px 0 2px; 
+  }
+  .guides-box p { 
+    font-size: 0.9em; 
+    margin: 0.5px 0; 
+  }
 
   .members-grid {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 5px 5px 5px;
   }
-  .members-grid p { font-size: 0.78em; }
+  .members-grid p { 
+    font-size: 0.78em; 
+  }
 
+  /* 4.4 JOURNEY BUTTON, JOURNAL INDEX GRID */
   .journey-btn {
     padding: 0.3em 0.6em;
     margin: 0;
     font-size: 1rem;
   }
-  .journey-link { margin: 2px 0; }
+  .journey-link { 
+    margin: 2px 0; 
+  }
 
   .journal-index .button-grid {
     grid-template-columns: 1fr 1fr;   /* 2 equal columns */
@@ -546,22 +708,51 @@ body.hiroshima-page .description-box li { margin-bottom: 0.25em; font-size: 0.95
     grid-template-columns: 1fr;
   }
 
+  .btn-card { 
+    font-size: 0.8em; 
+    padding: 4px 8px; 
+  }
+  .btn-card strong { 
+    display: block; 
+    font-size: 1em; 
+    line-height: 1; 
+  }
+  .btn-card small { 
+    display: block; 
+    margin-top: 2px; 
+    opacity: .8; 
+  }
 
-  .btn-card { font-size: 0.8em; padding: 4px 8px; }
-  .btn-card strong { display: block; font-size: 1em; line-height: 1; }
-  .btn-card small { display: block; margin-top: 2px; opacity: .8; }
+  .back-btn { 
+    padding: 2px 4px; 
+    font-size: 0.8rem; 
+  }
 
-  .back-btn { padding: 2px 4px; font-size: 0.8rem; }
+  /* 4.5 HOTEL HEADER/THUMB ON JOURNAL PAGES */
+  .hotel-title h1 { 
+    font-size: 1em; 
+  }
+  .description-box ul { 
+    font-size: 0.85em; 
+    line-height: 1; 
+  }
+  .hotel-thumb { 
+    flex: 0 0 75px; 
+  }
+  .hotel-title p { 
+    font-size: 0.75em; 
+  }
+  .hotel-title .stay-dates { 
+    font-size: 0.75em; 
+  }
 
-  /* journal page adjustments */
-  .hotel-title h1 { font-size: 1em; }
-  .description-box ul { font-size: 0.85em; line-height: 1; }
-  .hotel-thumb { flex: 0 0 75px; }
-  .hotel-title p { font-size: 0.75em }
-  .hotel-title .stay-dates { font-size: 0.75em }
-  
-  .album-banner .day-icons a { min-width: 1.5rem; height: 1.5rem; font-size: 0.75rem; }
+  .album-banner .day-icons a { 
+    min-width: 1.5rem; 
+    height: 1.5rem; 
+    font-size: 0.75rem; 
+  }
 
+  /* 4.6 LINK GRID + CARD IMAGES */
   .link-grid {
     width: 100%;
     margin: 20px auto;
@@ -581,9 +772,11 @@ body.hiroshima-page .description-box li { margin-bottom: 0.25em; font-size: 0.95
   .card p {
     font-size: 0.75rem;
   }
-   
-  footer { font-size: 0.8em; }
 
+  /* 4.7 FOOTER SIZE ON MOBILE */
+  footer { 
+    font-size: 0.8em; 
+  }
 }
 
 /* -------------------- END --------------------------*/
