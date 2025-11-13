@@ -9,7 +9,7 @@
   "theme_color": "#0b1a24",
   "icons": [
     {
-      "src": "/JandMBailey/assets/icons/icon.png",
+      "src": "/JandMBailey/assets/icons/icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
