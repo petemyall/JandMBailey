@@ -491,6 +491,13 @@ body.vietnam-page {
   background-image: url('images/vietnam-backgrounds/page-background.jpg') !important;
 }
 
+body.vietnam-page .main-heading {
+  color: #ffffff;
+  text-shadow: 
+     2px 2px 4px rgba(0,0,0,0.9),
+    -2px -2px 4px rgba(0,0,0,0.6);
+}
+
 body.vietnam-journal {
   background-image: url('images/vietnam-backgrounds/journal-page-background.jpg') !important;
 }
