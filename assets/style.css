@@ -500,7 +500,7 @@ body.vietnam-page h2{
     -2px -2px 4px rgba(0,0,0,0.6);
 }
 
-.vietnam-page section {
+body.vietnam-page section {
   margin-top: 25px;
 }
 body.vietnam-page .main-heading {
