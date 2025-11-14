@@ -644,6 +644,12 @@ body.hiroshima-page .description-box li {
   }
 
   /* 4.2 HOTEL PAGE SPECIFIC (MOBILE) */
+
+   body.keio-plaza-page .description-box li { 
+  margin-bottom: 0.95em; 
+  font-size: 0.95em; 
+}
+   
   
   body.metropolitan-nagano-page .description-box { 
     margin-top: 50px; 
