@@ -572,6 +572,10 @@ body.japan-page .description-box strong { color: #0077b6; font-size: 1.2em; }
 body.journal-index .description-box { font-size: 0.9em; }
 
 /* 3.7 HOTEL PAGE-SPECIFIC TWEAKS (DESKTOP/BASE) */
+
+body.keio-plaza-page .description-box { max-height: 60vh; max-height: 60svh; max-height: 60dvh; 
+margin-top: 30px;  overflow: auto; {
+                                       
 body.keio-plaza-page .description-box li { 
   margin-bottom: 0.35em; 
   font-size: 0.9em; 
