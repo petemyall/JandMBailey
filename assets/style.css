@@ -708,15 +708,6 @@ body.hiroshima-page .description-box li {
   .journey-link { 
     margin: 2px 0; 
   }
-
-  .journal-index .button-grid {
-    grid-template-columns: 1fr 1fr;   /* 2 equal columns */
-    gap: 8px;                         /* tighter gap */
-  }
-  .journal-index .button-grid.full-width-mobile {
-    grid-template-columns: 1fr;
-  }
-
   .btn-card { 
     font-size: 0.8em; 
     padding: 4px 8px; 
