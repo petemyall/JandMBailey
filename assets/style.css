@@ -20,10 +20,10 @@ body {
   color: #3a3a3a;
   text-align: center;
 
-  /* Viewport height handling */
-  min-height: 100vh;   /* fallback */
-  min-height: 100dvh;  /* dynamic VH (some tablets) */
-  min-height: 100svh;  /* safe VH: fixes bottom clipping on tablets */
+  /* Viewport height handling: fallback -> small -> dynamic */
+  min-height: 100vh;   /* legacy fallback */
+  min-height: 100svh;  /* safe small viewport (iOS, etc.) */
+  min-height: 100dvh;  /* dynamic viewport on modern browsers */
 
   display: flex;
   flex-direction: column;
@@ -464,7 +464,10 @@ body.index-page {
 }
 
 body.index-page .page-wrapper {
-  min-height: 100svh;      /* safe viewport height on tablets/phones */
+  /* same fallback stack as body */
+  min-height: 100vh;
+  min-height: 100svh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;  /* stack header/content/footer */
 }
@@ -512,7 +515,8 @@ body.vietnam-page .subtitle {
 }
 
 body.vietnam-journal {
-  background-image: url('images/vietnam-backgrounds/journal-page-background.jpg') !important;
+  background-image: url('images/v
+ietnam-backgrounds/journal-page-background.jpg') !important;
 }
 
 body.vietnam-index {
@@ -576,7 +580,10 @@ body.metropolitan-nagano-page .description-box {
   margin-top: 50px; 
 }
 body.kyoto-page .description-box { 
-  max-height: 60vh; 
+  /* stacked viewport max-height for better mobile/desktop behaviour */
+  max-height: 60vh;
+  max-height: 60svh;
+  max-height: 60dvh;
   margin-top: 30px; 
   overflow: auto; 
 }
@@ -648,7 +655,10 @@ body.hiroshima-page .description-box li {
 
   /* 4.2 HOTEL PAGE SPECIFIC (MOBILE) */
   body.keio-plaza-page .description-box { 
+    /* use same stacked viewport pattern */
+    max-height: 72vh; 
     max-height: 72svh; 
+    max-height: 72dvh; 
     margin-top: 10px; 
     overflow: auto; 
   }
@@ -664,6 +674,8 @@ body.hiroshima-page .description-box li {
 
   body.kyoto-page .description-box { 
     max-height: 57vh; 
+    max-height: 57svh; 
+    max-height: 57dvh; 
     margin-top: 10px; 
     overflow: auto; 
   }
