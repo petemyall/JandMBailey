@@ -566,7 +566,7 @@ body.journal-index .description-box { font-size: 0.9em; }
 
 /* 3.7 HOTEL PAGE-SPECIFIC TWEAKS (DESKTOP/BASE) */
 body.keio-plaza-page .description-box li { 
-  margin-bottom: 0.35em; 
+  margin-bottom: 0.50em; 
   font-size: 0.9em; 
 }
 body.metropolitan-nagano-page .description-box { 
