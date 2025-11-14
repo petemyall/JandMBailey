@@ -751,10 +751,7 @@ body.hiroshima-page .description-box li {
   .hotel-title h1 { 
     font-size: 1em; 
   }
-  .description-box ul { 
-    font-size: 0.85em; 
-    line-height: 1; 
-  }
+ 
   .hotel-thumb { 
     flex: 0 0 75px; 
   }
