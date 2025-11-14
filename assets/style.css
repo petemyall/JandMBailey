@@ -648,7 +648,7 @@ body.hiroshima-page .description-box li {
 
   /* 4.2 HOTEL PAGE SPECIFIC (MOBILE) */
   body.keio-plaza-page .description-box { 
-    max-height: 72vh; 
+    max-height: 72svh; 
     margin-top: 10px; 
     overflow: auto; 
   }
