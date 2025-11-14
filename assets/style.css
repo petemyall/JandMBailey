@@ -20,10 +20,10 @@ body {
   color: #3a3a3a;
   text-align: center;
 
-  /* Viewport height handling: fallback -> small -> dynamic */
-  min-height: 100vh;   /* legacy fallback */
-  min-height: 100svh;  /* safe small viewport (iOS, etc.) */
-  min-height: 100dvh;  /* dynamic viewport on modern browsers */
+  /* Viewport height handling */
+  min-height: 100vh;   /* fallback */
+  min-height: 100dvh;  /* dynamic VH (some tablets) */
+  min-height: 100svh;  /* safe VH: fixes bottom clipping on tablets */
 
   display: flex;
   flex-direction: column;
@@ -464,10 +464,7 @@ body.index-page {
 }
 
 body.index-page .page-wrapper {
-  /* same fallback stack as body */
-  min-height: 100vh;
-  min-height: 100svh;
-  min-height: 100dvh;
+  min-height: 100svh;      /* safe viewport height on tablets/phones */
   display: flex;
   flex-direction: column;  /* stack header/content/footer */
 }
@@ -495,16 +492,11 @@ body.vietnam-page {
 }
 
 body.vietnam-page .main-heading, 
-body.vietnam-page .subtitle,
-body.vietnam-page h2{
+body.vietnam-page .subtitle {
   color: #ffffff;
   text-shadow: 
      2px 2px 4px rgba(0,0,0,0.9),
     -2px -2px 4px rgba(0,0,0,0.6);
-}
-
-body.vietnam-page section {
-  margin-top: 25px;
 }
 body.vietnam-page .main-heading {
   font-size: 2.2em;   /* you choose the size */
@@ -515,8 +507,7 @@ body.vietnam-page .subtitle {
 }
 
 body.vietnam-journal {
-  background-image: url('images/v
-ietnam-backgrounds/journal-page-background.jpg') !important;
+  background-image: url('images/vietnam-backgrounds/journal-page-background.jpg') !important;
 }
 
 body.vietnam-index {
@@ -572,10 +563,6 @@ body.japan-page .description-box strong { color: #0077b6; font-size: 1.2em; }
 body.journal-index .description-box { font-size: 0.9em; }
 
 /* 3.7 HOTEL PAGE-SPECIFIC TWEAKS (DESKTOP/BASE) */
-
-body.keio-plaza-page .description-box { max-height: 50vh; max-height: 50svh; max-height: 50dvh; 
-margin-top: 30px;  overflow: auto; {
-                                       
 body.keio-plaza-page .description-box li { 
   margin-bottom: 0.35em; 
   font-size: 0.9em; 
@@ -584,10 +571,7 @@ body.metropolitan-nagano-page .description-box {
   margin-top: 50px; 
 }
 body.kyoto-page .description-box { 
-  /* stacked viewport max-height for better mobile/desktop behaviour */
-  max-height: 60vh;
-  max-height: 60svh;
-  max-height: 60dvh;
+  max-height: 60vh; 
   margin-top: 30px; 
   overflow: auto; 
 }
@@ -659,10 +643,7 @@ body.hiroshima-page .description-box li {
 
   /* 4.2 HOTEL PAGE SPECIFIC (MOBILE) */
   body.keio-plaza-page .description-box { 
-    /* use same stacked viewport pattern */
-    max-height: 72vh; 
-    max-height: 72svh; 
-    max-height: 72dvh; 
+    max-height: 60vh; 
     margin-top: 10px; 
     overflow: auto; 
   }
@@ -678,8 +659,6 @@ body.hiroshima-page .description-box li {
 
   body.kyoto-page .description-box { 
     max-height: 57vh; 
-    max-height: 57svh; 
-    max-height: 57dvh; 
     margin-top: 10px; 
     overflow: auto; 
   }
