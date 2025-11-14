@@ -616,10 +616,6 @@ body.hiroshima-page .description-box li {
   h2, h3 { font-size: 0.8em; }
 
   .members-box h3 { font-size: 0.9em; }
-  body.journal-index .description-box { 
-    margin: -5px; 
-    padding: 0.5px; 
-  }
 
   body.travel-page .description-box p { 
     font-size: 0.83em; 
