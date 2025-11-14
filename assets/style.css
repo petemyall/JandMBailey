@@ -558,9 +558,6 @@ body.japan-page .description-box {
 body.japan-page .description-box p { margin-bottom: 10px; }
 body.japan-page .description-box strong { color: #0077b6; font-size: 1.2em; }
 
-/* 3.6 JOURNAL INDEX */
-body.journal-index .description-box { font-size: 0.9em; }
-
 /* 3.7 HOTEL PAGE-SPECIFIC TWEAKS (DESKTOP/BASE) */
 body.keio-plaza-page .description-box li { 
   margin-bottom: 0.50em; 
