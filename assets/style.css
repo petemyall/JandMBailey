@@ -136,7 +136,7 @@ body.journal-page .description-box .inner {
   width: 100%;
 }
 body.travel-page .description-box {
-   height: 70svh; }
+   height: 75svh; }
 
 body.journal-page .description-box ul {
   text-align: left;          /* override container */
