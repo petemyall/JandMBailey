@@ -115,8 +115,7 @@ body.main-page .description-box p { margin-bottom: 10px; }
 body.main-page .description-box strong { color: #0077b6; font-size: 1.2em; }
 
 /* 2.2 JOURNAL / VIETNAM JOURNAL DESCRIPTION BOXES */
-body.journal-page .description-box,
-body.viet-journal-page .description-box {
+body.journal-page .description-box {
   background: rgba(247, 200, 208, 0.3);
   color: #b30000;
   max-width: 800px;
@@ -131,17 +130,14 @@ body.viet-journal-page .description-box {
   display: block;
  max-height: 60vh; overflow: auto; 
 }
-body.keio-plaza-page .description-box { margin-top: 10px; }
 
-body.journal-page .description-box ul,
-body.viet-journal-page .description-box ul {
+body.journal-page .description-box ul {
   text-align: left;          /* override container */
   list-style: disc outside;  /* explicit */
   padding-left: 1.2em;       /* 2em may feel indented on mobiles */
 }
 
-body.journal-page .description-box li,
-body.viet-journal-page .description-box li { 
+body.journal-page .description-box li { 
   margin-bottom: 0.9em; 
 }
 
