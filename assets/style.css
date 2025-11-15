@@ -129,8 +129,6 @@ body.journal-page .description-box {
   text-align: center;
   height: 60vh;
   overflow: auto;
-
-  display: flex;           /* allows vertical centring behaviour */
 }
 
 body.journal-page .description-box .inner {
