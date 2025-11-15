@@ -494,7 +494,8 @@ body.vietnam-page {
 }
 
 body.vietnam-page .main-heading, 
-body.vietnam-page .subtitle {
+body.vietnam-page .subtitle,
+body.vietnam-page h2 {
   color: #ffffff;
   text-shadow: 
      2px 2px 4px rgba(0,0,0,0.9),
