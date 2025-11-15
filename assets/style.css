@@ -127,8 +127,15 @@ body.journal-page .description-box {
   font-weight: bold;
   line-height: 1.4;
   text-align: center;
-  display: block;
-  height: 60vh; height 60svh; overflow: auto; 
+  height: 60vh;
+  overflow: auto;
+
+  display: flex;           /* allows vertical centring behaviour */
+}
+
+body.journal-page .description-box .inner {
+  margin: auto 0;           /* centres if short, top-aligns if long */
+  width: 100%;
 }
 
 body.journal-page .description-box ul {
