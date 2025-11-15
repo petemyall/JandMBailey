@@ -114,7 +114,7 @@ body.main-page .description-box img {
 body.main-page .description-box p { margin-bottom: 10px; }
 body.main-page .description-box strong { color: #0077b6; font-size: 1.2em; }
 
-/* 2.2 JOURNAL / VIETNAM JOURNAL DESCRIPTION BOXES */
+/* 2.2 JOURNAL /JAPAN & VIETNAM JOURNAL DESCRIPTION BOXES */
 body.journal-page .description-box {
   background: rgba(247, 200, 208, 0.3);
   color: #b30000;
@@ -135,6 +135,8 @@ body.journal-page .description-box .inner {
   margin: auto 0;           /* centres if short, top-aligns if long */
   width: 100%;
 }
+body.travel-page .description-box {
+   height: 65svh; }
 
 body.journal-page .description-box ul {
   text-align: left;          /* override container */
